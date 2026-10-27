@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Kateryna Katarovska — Marketing & Visual Designer">
+<meta property="og:description" content="6+ years of marketing design for IT, SaaS, fintech and EdTech: case studies, executive decks, landing pages and ad creatives.">
+<meta property="og:image" content="img/honna.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23D9613E'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'%3EKK%3C/text%3E%3C/svg%3E">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Kateryna Katarovska</title>
+<meta name="description" content="Marketing & visual designer in Bratislava. 6+ years of marketing design for IT, SaaS, fintech and EdTech.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: Tilework-style rounded bento (2fr 1fr 1fr) under a floating pill nav, painted in PPG colours. */
+:root{
+  --bg:#E9EBEE; --card:#FBFBFC; --fg:#1C1D1F; --muted:#62676F; --faint:#9AA0A8; --line:#D3D7DC;
+  --btn:#1C1D1F; --btn-fg:#FBFBFC;
+  /* PPG paints — identical in both themes */
+  --blue-smoke:#A9BFC5; --mr-robin:#DFE9E1; --seaweed:#6A6F52; --rescue:#D9613E; --shepherd:#E6CABB; --inky:#404854;
+  --ink-dark:#1C1D1F; --ink-light:#F6F4F1;
+  --f-sans:"Inter","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --f-display:"Inter Tight","Inter","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --t-xs:12px; --t-s:15px; --t-m:17px; --t-l:clamp(22px,2vw,30px); --t-xl:clamp(32px,3.4vw,52px); --t-hero:clamp(40px,5.2vw,80px);
+  --r:32px; --gap:18px; --max:1320px;
+  --ease-out:cubic-bezier(0.23,1,0.32,1); --ease-in-out:cubic-bezier(0.77,0,0.175,1);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141517; --card:#202226; --fg:#EEF0F2; --muted:#9EA4AC; --faint:#6E747C; --line:#33363B; --btn:#EEF0F2; --btn-fg:#141517; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#141517; --card:#202226; --fg:#EEF0F2; --muted:#9EA4AC; --faint:#6E747C; --line:#33363B; --btn:#EEF0F2; --btn-fg:#141517; color-scheme:dark;}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-sans);font-size:var(--t-m);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+h1,h2,h3,h4,.big,.fig,.case-title,.wordmark,.case-sub,.q .pull,.elist a,.t-quote blockquote{font-family:var(--f-display)}
+:focus-visible{outline:2px solid var(--rescue);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:760px){.wrap{padding-left:max(28px,env(safe-area-inset-left,0px));padding-right:max(28px,env(safe-area-inset-right,0px))}}
+.label{font-family:var(--f-mono);font-size:var(--t-xs);letter-spacing:.09em;text-transform:uppercase;margin:0;line-height:1.3}
+.btn{display:inline-flex;align-items:center;gap:8px;font:500 var(--t-s)/1 var(--f-sans);text-decoration:none;background:var(--btn);color:var(--btn-fg);border:1px solid var(--btn);border-radius:999px;padding:14px 22px;cursor:pointer;white-space:nowrap;transition:transform 160ms var(--ease-out),background-color .2s ease,border-color .2s ease}
+.btn:active{transform:scale(.97)}
+.btn.accent{background:var(--rescue);border-color:var(--rescue);color:#fff}
+.btn.ghost{background:transparent;color:var(--fg);border-color:var(--line)}
+.btn .ar{font-size:15px;line-height:1}
+
+/* Pill nav */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;padding-block:16px 6px}
+.pill{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;background:color-mix(in srgb,var(--card) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:999px;padding:8px 8px 8px 22px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:500;text-decoration:none;white-space:nowrap}
+.gdot{width:9px;height:9px;border-radius:50%;background:#7FC79A;flex:none}
+.links-c{display:flex;gap:28px}
+.links-c a{text-decoration:none;color:var(--muted)}
+.links-c a:hover{color:var(--fg)}
+.right{display:flex;align-items:center;gap:8px}
+.lang{position:relative;display:inline-grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:999px;padding:2px}
+.lang::before{content:"";position:absolute;top:2px;bottom:2px;left:2px;width:calc(50% - 2px);border-radius:999px;background:var(--fg);transition:transform 240ms var(--ease-out)}
+.lang[data-active="ua"]::before{transform:translateX(100%)}
+.lang button{position:relative;z-index:1;font:500 var(--t-xs)/1 var(--f-mono);letter-spacing:.05em;background:transparent;color:var(--muted);border:0;border-radius:999px;padding:8px 11px;cursor:pointer;transition:color 200ms ease}
+.lang button[aria-pressed="true"]{color:var(--bg)}
+@media (max-width:860px){.links-c{display:none}}
+@media (max-width:440px){.right .btn{display:none}.pill{padding-right:8px}}
+
+/* Bento */
+.bento{display:grid;gap:var(--gap);margin-top:16px;
+  grid-template-columns:2fr 1fr 1fr;
+  grid-template-rows:minmax(310px,auto) minmax(310px,auto) minmax(300px,auto) minmax(300px,auto);
+  grid-template-areas:"hero photo status" "hero photo exp" "feat tools quote" "clients else talk"}
+.tile{border-radius:var(--r);padding:clamp(24px,2.4vw,38px);display:flex;flex-direction:column;min-width:0;position:relative;overflow:hidden;color:var(--ink-dark);text-decoration:none}
+.tile.on-dark{color:var(--ink-light)}
+.tile .push{margin-top:auto}
+
+.t-hero{grid-area:hero;background:var(--card);color:var(--fg)}
+.who{display:flex;align-items:center;gap:14px;color:var(--muted)}
+.avatar{width:58px;height:58px;border-radius:50%;object-fit:cover;flex:none}
+h1{font-size:var(--t-hero);font-weight:500;letter-spacing:-.05em;line-height:1;margin:clamp(36px,5vw,64px) 0 0;max-width:13ch;text-wrap:balance}
+html[lang="uk"] h1{max-width:16ch;font-size:clamp(36px,4.6vw,70px)}
+.t-hero .sub{color:var(--muted);margin:22px 0 0;max-width:50ch;font-size:var(--t-m);line-height:1.6}
+.ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+
+.t-photo{grid-area:photo;padding:0;background:var(--shepherd)}
+.t-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block;min-height:420px}
+
+.t-status{grid-area:status;background:var(--mr-robin)}
+.t-status .label{display:flex;align-items:center;gap:10px}
+.pulse{width:12px;height:12px;border-radius:50%;background:#3E9B5F;flex:none;animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(62,155,95,.45)}70%{box-shadow:0 0 0 9px rgba(62,155,95,0)}100%{box-shadow:0 0 0 0 rgba(62,155,95,0)}}
+.tile h3{font-weight:500;letter-spacing:-.03em;line-height:1.1;margin:0;font-size:var(--t-l);text-wrap:balance}
+.tile .p{margin:12px 0 0;font-size:var(--t-s);line-height:1.5}
+
+.t-exp{grid-area:exp;background:var(--blue-smoke)}
+.big{font-size:clamp(56px,5.6vw,88px);font-weight:500;letter-spacing:-.06em;line-height:.95;white-space:nowrap}
+html[lang="uk"] .big{font-size:clamp(44px,4.4vw,70px)}
+
+.t-feat{grid-area:feat;background:var(--seaweed) url("img/honna.jpg") center 28%/cover no-repeat;min-height:300px}
+.t-feat::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,32,26,0) 30%,rgba(28,32,26,.78) 100%);pointer-events:none}
+.t-feat>*{position:relative}
+.t-feat .roundbtn{position:absolute}
+.t-feat .ghost-word{position:absolute;right:-.04em;top:-.12em;font-size:clamp(120px,15vw,230px);font-weight:500;letter-spacing:-.07em;line-height:1;color:rgba(255,255,255,.08);pointer-events:none;white-space:nowrap}
+.t-feat .label{opacity:.7}
+.t-feat h3{font-size:var(--t-xl);margin-top:8px}
+.t-feat .p{opacity:.8;max-width:40ch}
+.roundbtn{position:absolute;right:clamp(20px,2.2vw,34px);bottom:clamp(20px,2.2vw,34px);width:60px;height:60px;border-radius:50%;background:#fff;color:var(--ink-dark);display:grid;place-items:center;font-size:22px;transition:transform 300ms var(--ease-out)}
+
+.t-tools{grid-area:tools;background:var(--shepherd)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.chips li{background:rgba(255,255,255,.62);border-radius:999px;padding:9px 16px;font-size:var(--t-s)}
+
+.t-quote{grid-area:quote;background:var(--inky)}
+.qmark{font-size:56px;line-height:.6;color:var(--rescue);font-weight:600;height:30px;margin:0}
+.t-quote blockquote{margin:22px 0 0;font-size:clamp(18px,1.5vw,22px);line-height:1.45;letter-spacing:-.01em}
+.t-quote .by{color:rgba(246,244,241,.62);font-size:var(--t-s)}
+
+.t-clients{grid-area:clients;background:var(--card);color:var(--fg)}
+.t-clients .label{color:var(--muted)}
+.inds li{background:var(--bg);color:var(--fg)}
+
+.t-else{grid-area:else;background:var(--blue-smoke)}
+.elist{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:8px}
+.elist a{display:flex;justify-content:space-between;align-items:baseline;gap:12px;text-decoration:none;font-size:clamp(24px,2.2vw,32px);font-weight:500;letter-spacing:-.03em;padding-block:6px}
+.elist a small{white-space:nowrap;font-size:var(--t-xs);font-family:var(--f-mono);letter-spacing:.04em;font-weight:400;opacity:.7;margin-left:auto;margin-right:12px}
+.elist a .ar{font-size:20px}
+
+
+.t-talk{grid-area:talk;background:var(--rescue);color:#fff}
+.t-talk .label{opacity:.85}
+.t-talk h3{font-size:clamp(44px,4.4vw,68px);letter-spacing:-.055em;line-height:.95}
+.t-talk .mail{display:block;margin-top:12px;font-size:var(--t-s);word-break:break-all}
+
+
+@media (max-width:1100px){
+  .bento{grid-template-columns:1fr 1fr;grid-template-rows:none;
+    grid-template-areas:"hero hero" "photo status" "photo exp" "feat feat" "tools quote" "clients clients" "else talk"}
+  .tile{min-height:260px}
+  .t-hero{min-height:0}
+}
+@media (max-width:640px){
+  .bento{grid-template-columns:1fr;grid-template-areas:"hero" "photo" "status" "exp" "feat" "tools" "quote" "clients" "else" "talk"}
+  .t-photo img{min-height:0;aspect-ratio:4/5}
+  :root{--r:26px}
+}
+
+/* Sections */
+section.block{margin-top:clamp(72px,10vw,140px)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:clamp(20px,3vw,36px)}
+h2{font-size:var(--t-xl);font-weight:500;letter-spacing:-.045em;line-height:1.02;margin:0;text-wrap:balance}
+.sec-head .label{color:var(--muted)}
+
+/* Work */
+.work{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
+.card a{display:block;text-decoration:none;color:inherit}
+.card .blockc{position:relative;aspect-ratio:808/632;max-width:100%;border-radius:28px;padding:22px 24px;display:flex;flex-direction:column;color:var(--ink-dark);background-size:cover;background-position:center;overflow:hidden;transition:transform 300ms var(--ease-out)}
+.card .blockc.on-dark{color:var(--ink-light)}
+.card a:active .blockc{transform:scale(.985);transition-duration:160ms}
+.card .blockc .label{opacity:.72}
+.card .blockc h3{margin-top:auto;font-size:clamp(28px,2.8vw,42px);font-weight:500;letter-spacing:-.045em;line-height:.98;text-wrap:balance}
+.card .blockc .rb{position:absolute;top:18px;right:18px;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.85);color:var(--ink-dark);display:grid;place-items:center;font-size:16px;transition:transform 300ms var(--ease-out)}
+.card .blockc.has-img h3,.card .blockc.has-img .label{display:none}
+.card .cap{display:flex;justify-content:space-between;gap:12px;padding:14px 6px 0}
+.card .cap p{margin:0;font-size:var(--t-s)}
+.card .cap .label{color:var(--muted);white-space:nowrap;padding-top:3px}
+@media (max-width:1100px){.work{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.work{grid-template-columns:1fr}}
+
+/* Testimonials */
+.quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
+.q{display:flex;flex-direction:column;gap:18px;padding:clamp(24px,2.4vw,36px);border-radius:var(--r);color:var(--ink-dark);margin:0;min-width:0}
+.q:nth-child(1){background:var(--mr-robin)}
+.q:nth-child(2){background:var(--shepherd)}
+.q:nth-child(3){background:var(--blue-smoke)}
+.q .pull{font-size:var(--t-l);font-weight:500;letter-spacing:-.03em;line-height:1.12;margin:0;text-wrap:balance}
+.q .full{font-size:var(--t-s);line-height:1.55;opacity:.8}
+.q .full p{margin:0 0 10px}
+.q .full p:last-child{margin:0}
+.q figcaption{margin-top:auto;padding-top:14px;border-top:1px solid rgba(28,29,31,.18);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.q figcaption b{font-weight:500}
+.q figcaption span{font-size:var(--t-xs);opacity:.7;align-self:center}
+@media (max-width:1100px){.quotes{grid-template-columns:1fr}.q .full{max-width:70ch}}
+
+/* About */
+.about{display:grid;grid-template-columns:5fr 6fr;gap:var(--gap)}
+.about .txt{background:var(--card);border-radius:var(--r);padding:clamp(24px,3vw,44px);min-width:0}
+.about .txt p{color:var(--muted);max-width:56ch;margin:20px 0 0;line-height:1.6}
+.about .txt p:first-of-type{color:var(--fg)}
+.timeline{list-style:none;margin:0;padding:8px clamp(24px,3vw,44px);background:var(--card);border-radius:var(--r);min-width:0}
+.timeline li{display:grid;grid-template-columns:130px 1fr;gap:16px;padding-block:22px;border-bottom:1px solid var(--line)}
+.timeline li:last-child{border-bottom:0}
+.timeline .label{color:var(--muted);padding-top:6px;font-variant-numeric:tabular-nums}
+.timeline h4{margin:0;font-size:var(--t-l);font-weight:500;letter-spacing:-.03em;line-height:1.15}
+.timeline .org{margin:4px 0 0;font-size:var(--t-s)}
+.timeline .what{margin:6px 0 0;font-size:var(--t-s);color:var(--muted)}
+@media (max-width:900px){.about{grid-template-columns:1fr}}
+@media (max-width:460px){.timeline li{grid-template-columns:1fr;gap:4px}}
+
+/* Contact */
+.contact{background:var(--card);border-radius:var(--r);padding:clamp(28px,5vw,72px)}
+.contact .label{display:flex;align-items:center;gap:10px;color:var(--muted)}
+.contact h2{font-size:clamp(44px,6.6vw,100px);letter-spacing:-.055em;line-height:.98;max-width:12ch;margin-top:26px}
+.contact .sub{color:var(--muted);margin:20px 0 30px;max-width:48ch}
+.mail-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px}
+.mail{font-size:var(--t-l);letter-spacing:-.02em;user-select:all;word-break:break-all;font-weight:500;margin-right:6px}
+.copy-note{font-size:var(--t-xs);color:var(--muted);min-height:1em}
+
+/* Case page */
+#home>section,#contact,#work,#reviews,#about{scroll-margin-top:96px}
+.case{padding-top:clamp(20px,3vw,40px)}
+.case-head{display:grid;gap:18px;margin-bottom:clamp(28px,4vw,48px)}
+.back{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--muted);font-size:var(--t-s);border:1px solid var(--line);border-radius:999px;padding:10px 18px;justify-self:start;transition:transform 160ms var(--ease-out),color .2s ease}
+.back:active{transform:scale(.97)}
+.case-head .label{color:var(--muted);margin-top:14px}
+.case-title{font-size:clamp(48px,8.4vw,132px);font-weight:500;letter-spacing:-.06em;line-height:.92;margin:0;text-wrap:balance}
+.case-sub{font-size:var(--t-l);color:var(--muted);max-width:32ch;margin:0;letter-spacing:-.02em;line-height:1.25;text-wrap:balance}
+.case-grid{display:grid;grid-template-columns:2fr 1fr;gap:var(--gap)}
+.case-hero{margin:0;border-radius:var(--r);overflow:hidden;background:var(--card);min-width:0}
+.case-hero img{display:block;width:100%;height:auto}
+.case-side{display:grid;grid-template-rows:auto 1fr;gap:var(--gap);min-width:0}
+.meta{background:var(--card);color:var(--fg);margin:0;gap:0}
+.meta div{display:grid;gap:6px;padding-block:14px;border-bottom:1px solid var(--line)}
+.meta div:first-child{padding-top:0}
+.meta div:last-child{border-bottom:0;padding-bottom:0}
+.meta dt{color:var(--muted)}
+.meta dd{margin:0;font-size:var(--t-m);font-weight:500;letter-spacing:-.01em}
+.stat{min-height:220px}
+.stat .fig{font-size:clamp(56px,5.4vw,88px);font-weight:500;letter-spacing:-.06em;line-height:.95;white-space:nowrap}
+.case-body{margin-top:clamp(48px,7vw,96px);border-bottom:1px solid var(--line)}
+.case-row{display:grid;grid-template-columns:1fr 2fr;gap:var(--gap);padding-block:clamp(24px,3vw,36px);border-top:1px solid var(--line)}
+.case-row h3{font-size:var(--t-l);font-weight:500;letter-spacing:-.03em;margin:0;line-height:1.15}
+.case-row p{margin:0;font-size:clamp(18px,1.5vw,22px);line-height:1.5;max-width:58ch;min-width:0}
+.case-gallery{display:grid;gap:var(--gap);margin-top:clamp(40px,6vw,80px)}
+.case-gallery figure{margin:0;border-radius:var(--r);overflow:hidden;background:var(--card)}
+.case-gallery img{display:block;width:100%;height:auto}
+.g-row{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:var(--gap);align-items:start}
+.g-row img{display:block;width:100%;height:auto}
+.g-wide video{display:block;width:100%;height:auto}
+.case-gallery .g-mid{width:100%;max-width:860px;justify-self:center}
+.g-row figure{margin:0;border-radius:var(--r);overflow:hidden;background:#0B1433}
+.g-vid video{display:block;width:100%;aspect-ratio:1;object-fit:cover}
+@media (max-width:640px){.g-row{grid-template-columns:1fr}}
+.case-note{color:var(--muted);margin:22px 0 0;text-transform:none;letter-spacing:.02em}
+.case-cta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap);margin-top:clamp(48px,7vw,96px)}
+.case-cta .tile{min-height:300px;transition:transform 160ms var(--ease-out)}
+.case-cta .t-talk{grid-area:auto}
+.case-cta .tile:active{transform:scale(.985)}
+.t-bh{background:var(--inky)}
+.t-bh h3{font-size:var(--t-l);max-width:12ch}
+.t-next{background:var(--inky) center/cover no-repeat}
+.t-next::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,21,23,.15) 20%,rgba(20,21,23,.8) 100%)}
+.t-next>*{position:relative}
+.t-next h3{font-size:var(--t-xl)}
+@media (hover:hover) and (pointer:fine){.back:hover{color:var(--fg)}.t-bh:hover .roundbtn{transform:rotate(45deg)}}
+@media (max-width:980px){.case-grid{grid-template-columns:1fr}.case-side{grid-template-columns:1fr 1fr;grid-template-rows:none}.case-cta{grid-template-columns:1fr 1fr}.case-cta .t-talk{grid-column:1/-1}}
+@media (max-width:640px){.case-side,.case-cta{grid-template-columns:1fr}.case-row{grid-template-columns:1fr;gap:10px}.case-cta .tile{min-height:220px}}
+.settled .bento>.tile,.settled .t-photo img,.settled .pill{animation:none}
+
+/* Footer */
+footer{overflow:hidden;margin-top:clamp(56px,8vw,110px)}
+.wordmark{font-size:clamp(60px,16.4vw,240px);font-weight:500;letter-spacing:-.07em;line-height:.8;margin:0;white-space:nowrap;color:var(--fg)}
+.foot-row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:24px 30px;border-top:1px solid var(--line);margin-top:clamp(16px,2vw,28px)}
+.foot-row .label{color:var(--muted)}
+.foot-links{display:flex;gap:18px}
+.foot-links a{font-size:var(--t-s);text-decoration:none;color:var(--muted)}
+.foot-links a:hover{color:var(--fg)}
+
+/* Motion */
+.t-feat,.t-talk{transition:transform 160ms var(--ease-out)}
+.t-feat:active,.t-talk:active{transform:scale(.985)}
+@media (hover:hover) and (pointer:fine){
+  .card a:hover .blockc{transform:translateY(-4px)}
+  .card a:hover .rb,.t-feat:hover .roundbtn{transform:rotate(45deg)}
+  .elist a:hover{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+  .t-talk:hover h3{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}
+}
+@keyframes rise{from{opacity:0;transform:translateY(16px) scale(.985)}}
+@keyframes fade{from{opacity:0}}
+@keyframes settle{from{transform:scale(1.07)}}
+.pill{animation:fade 500ms ease backwards}
+.bento>.tile{animation:rise 700ms var(--ease-out) backwards}
+.bento>.tile:nth-child(2){animation-delay:60ms}
+.bento>.tile:nth-child(3){animation-delay:120ms}
+.bento>.tile:nth-child(4){animation-delay:180ms}
+.bento>.tile:nth-child(5){animation-delay:240ms}
+.bento>.tile:nth-child(6){animation-delay:290ms}
+.bento>.tile:nth-child(7){animation-delay:340ms}
+.bento>.tile:nth-child(8){animation-delay:380ms}
+.bento>.tile:nth-child(9){animation-delay:420ms}
+.bento>.tile:nth-child(10){animation-delay:460ms}
+.t-photo img{animation:settle 1200ms var(--ease-out) backwards}
+.btn.done{background:var(--seaweed);border-color:var(--seaweed);color:#fff}
+@media (prefers-reduced-motion:reduce){
+  .bento>.tile{animation-name:fade;animation-duration:400ms}
+  .t-photo img{animation:none}
+  .card a .blockc,.card a:hover .blockc{transform:none}
+  .pulse{animation:none}
+}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <div class="pill">
+      <a class="brand" href="#top"><span class="gdot" aria-hidden="true"></span>Kateryna Katarovska</a>
+      <nav class="links-c" aria-label="Main">
+        <a href="#work" data-i="nav_work">Work</a>
+        <a href="#reviews" data-i="nav_rev">Reviews</a>
+        <a href="#about" data-i="nav_about">About</a>
+        <a href="#contact" data-i="nav_contact">Contact</a>
+      </nav>
+      <div class="right">
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" id="lang-en" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" id="lang-ua" data-lang="ua" aria-pressed="false">UA</button>
+        </div>
+        <a class="btn" href="#contact"><span data-i="email_me">Email me</span><span class="ar" aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+<div id="home">
+  <div class="bento">
+    <section class="tile t-hero" aria-labelledby="h1">
+      <div class="who"><img class="avatar" src="img/avatar.jpg" alt="" width="58" height="58"><p class="label" data-i="eyebrow">Marketing &amp; Visual Designer · Bratislava</p></div>
+      <h1 id="h1" data-i="h1">I make complex products look clear and sell.</h1>
+      <p class="sub" data-i="sub">6+ years of marketing design for IT, SaaS, fintech and EdTech: case studies, executive decks, landing pages and ad creatives.</p>
+      <div class="ctas">
+        <a class="btn accent" href="#contact"><span data-i="email_me">Email me</span><span class="ar" aria-hidden="true">↗</span></a>
+        <a class="btn ghost" href="#work"><span data-i="see_work">See work</span><span class="ar" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <div class="tile t-photo"><img src="img/kateryna.jpg" alt="Kateryna Katarovska" data-i-alt="photo_alt" width="900" height="1200"></div>
+
+    <div class="tile t-status">
+      <p class="label"><span class="pulse" aria-hidden="true"></span><span data-i="status">Status</span></p>
+      <div class="push">
+        <h3 data-i="status_h">Open to new projects</h3>
+        <p class="p" data-i="status_p">Remote or freelance: marketing design, presentations, landing pages, ad creatives.</p>
+      </div>
+    </div>
+
+    <div class="tile t-exp">
+      <p class="label" data-i="exp">Experience</p>
+      <div class="push">
+        <div class="big" data-i="yrs">6+ yrs</div>
+        <p class="p" data-i="exp_p">60+ case studies, 30+ executive presentations (one for a Big 4 firm) and dozens of landing pages.</p>
+      </div>
+    </div>
+
+    <a class="tile t-feat on-dark" href="#honna">
+      <div class="push">
+        <p class="label" data-i="feat_label">Featured · E-commerce</p>
+        <h3>Honna London</h3>
+        <p class="p" data-i="feat_desc">Website redesign.</p>
+      </div>
+      <span class="roundbtn" aria-hidden="true">↗</span>
+    </a>
+
+    <div class="tile t-tools">
+      <p class="label" data-i="tools">Tools</p>
+      <ul class="chips push">
+        <li>Figma</li><li>Photoshop</li><li>Illustrator</li><li>Adobe CC</li><li data-i="ai">AI tools</li>
+      </ul>
+    </div>
+
+    <figure class="tile t-quote on-dark" style="margin:0">
+      <p class="qmark" aria-hidden="true">“</p>
+      <blockquote data-i="bq">She doesn’t just make things look good, she makes them work.</blockquote>
+      <figcaption class="by push" data-i="bq_by">Iryna P., colleague at Onix-Systems</figcaption>
+    </figure>
+
+    <div class="tile t-clients">
+      <p class="label" data-i="industries">Industries</p>
+      <ul class="chips inds push"><li>IT outsourcing</li><li>SaaS</li><li>Fintech</li><li>EdTech</li><li>iGaming</li><li>E-commerce</li></ul>
+    </div>
+
+    <div class="tile t-else">
+      <p class="label" data-i="elsewhere">Elsewhere</p>
+      <ul class="elist">
+        <li><a href="https://www.behance.net/katarovska" target="_blank" rel="noopener">Behance<small data-i="bh_stats">6.8K views</small><span class="ar" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://www.linkedin.com/in/kateryna-katarovska-999645174/" target="_blank" rel="noopener">LinkedIn<span class="ar" aria-hidden="true">↗</span></a></li>
+      </ul>
+    </div>
+
+    <a class="tile t-talk" href="#contact">
+      <p class="label" data-i="talk">Got a project?</p>
+      <div class="push">
+        <h3 data-i="talk_h">Let’s talk</h3>
+        <span class="mail">kateryna.katarovska@gmail.com</span>
+      </div>
+    </a>
+  </div>
+
+  <section class="block" id="work">
+    <div class="sec-head">
+      <h2 data-i="sel_work">Selected work</h2>
+      <span class="label" data-i="count">9 projects · Behance</span>
+    </div>
+    <div class="work" id="work-grid"></div>
+  </section>
+
+  <section class="block" id="reviews">
+    <div class="sec-head">
+      <h2 data-i="rev_h">Kind words</h2>
+      <span class="label" data-i="rev_note">3 recommendations</span>
+    </div>
+    <div class="quotes">
+      <figure class="q">
+        <blockquote class="pull" data-i="q1_pull"></blockquote>
+        <div class="full"><p data-i="q1_a"></p><p data-i="q1_b"></p></div>
+        <figcaption><b>Eric K.</b><span data-i="q1_who"></span></figcaption>
+      </figure>
+      <figure class="q">
+        <blockquote class="pull" data-i="q2_pull"></blockquote>
+        <div class="full"><p data-i="q2_a"></p><p data-i="q2_b"></p></div>
+        <figcaption><b>Maryna P.</b><span data-i="q2_who"></span></figcaption>
+      </figure>
+      <figure class="q">
+        <blockquote class="pull" data-i="q3_pull"></blockquote>
+        <div class="full"><p data-i="q3_a"></p><p data-i="q3_b"></p></div>
+        <figcaption><b>Iryna P.</b><span data-i="q3_who"></span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="block" id="about">
+    <div class="sec-head"><h2 data-i="about_h">Started in newsrooms. Stayed for the layout.</h2><span class="label">2018 — 2026</span></div>
+    <div class="about">
+      <div class="txt">
+        <p class="label" data-i="nav_about" style="color:var(--muted);margin:0">About</p>
+        <p data-i="about_p1"></p>
+        <p data-i="about_p2"></p>
+      </div>
+      <ol class="timeline">
+        <li><span class="label" data-i="t1_y">2026 — now</span><div><h4 data-i="t1_r"></h4><p class="org">Syndicode</p><p class="what" data-i="t1_w"></p></div></li>
+        <li><span class="label">2019 — 2026</span><div><h4 data-i="t2_r"></h4><p class="org">Onix-Systems</p><p class="what" data-i="t2_w"></p></div></li>
+        <li><span class="label">2018 — 2019</span><div><h4 data-i="t3_r"></h4><p class="what" data-i="t3_w"></p></div></li>
+        <li><span class="label" data-i="t4_y">Before 2018</span><div><h4 data-i="t4_r"></h4><p class="org" data-i="t4_o"></p><p class="what" data-i="t4_w"></p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block contact" id="contact">
+    <p class="label"><span class="gdot" style="background:var(--rescue)" aria-hidden="true"></span><span data-i="nav_contact">Contact</span></p>
+    <h2 data-i="c_h">Let’s make it clear.</h2>
+    <p class="sub" data-i="c_sub">Tell me about your product, deck or campaign.</p>
+    <div class="mail-row">
+      <span class="mail" id="mail">kateryna.katarovska@gmail.com</span>
+      <button class="btn accent" type="button" id="copy-btn" data-i="copy">Copy email</button>
+      <a class="btn ghost" href="https://www.linkedin.com/in/kateryna-katarovska-999645174/" target="_blank" rel="noopener">LinkedIn <span class="ar" aria-hidden="true">↗</span></a>
+      <span class="copy-note" id="copy-note" aria-live="polite"></span>
+    </div>
+  </section>
+</div>
+<div id="case-view" hidden></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="wordmark" aria-hidden="true">Katarovska</p>
+    <div class="foot-row">
+      <span class="label">© 2026 Kateryna Katarovska</span>
+      <div class="foot-links">
+        <a href="https://www.behance.net/katarovska" target="_blank" rel="noopener">Behance</a>
+        <a href="https://www.linkedin.com/in/kateryna-katarovska-999645174/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Projects: set img to a file path to replace the colour block with the cover.
+  var P = [
+    {id:"143151485/Honna-London-e-commerce-website-redesign", name:"Honna London", c:"--blue-smoke", dark:false,
+      en:["Web design","E-commerce website redesign"], ua:["Веб-дизайн","Редизайн e-commerce сайту"], img:"img/honna.jpg"},
+    {id:"182465797/Decisive-Corporate-website-redesign", name:"Decisive", c:"--inky", dark:true,
+      en:["Web design","Corporate website redesign"], ua:["Веб-дизайн","Редизайн корпоративного сайту"], img:"img/decisive.jpg"},
+    {id:"253892191/Selected-Marketing-Design-Work", name:"Selected Marketing Design", c:"--rescue", dark:true,
+      en:["Marketing design","Editorial, decks, lead magnets, brand collateral"], ua:["Маркетинговий дизайн","Редакційний дизайн, презентації, лід-магніти"], img:"img/marketing/01.jpg"},
+    {id:"257344473/Pitch-deck-presentation", name:"Corevia Pitch Deck", c:"--blue-smoke", dark:false,
+      en:["Presentations","Pitch deck for an AI services company"], ua:["Презентації","Пітч-дек для AI-компанії"], img:"img/pitch.jpg"},
+    {id:"257264781/Make-Your-Next-Move-Game-Ad-Creatives", name:"Chicken Road", c:"--inky", dark:true,
+      en:["iGaming","Ad creative campaign: 5 creatives, key visual"], ua:["iGaming","Рекламна кампанія: 5 креативів, key visual"], img:"img/chicken/01.jpg"},
+    {id:"254929851/Nibble-Creative-Ad-Campaign-for-Microlearning", name:"Nibble", c:"--shepherd", dark:false,
+      en:["Ad creatives","Ad campaign for a bite-sized learning app"], ua:["Рекламні креативи","Кампанія для застосунку мікронавчання"], img:"img/nibble.jpg"},
+    {id:"257238381/Creative-banners-promo", name:"iGaming Promo Banners", c:"--rescue", dark:true,
+      en:["iGaming","Promo banner set"], ua:["iGaming","Набір промо-банерів"], img:"img/banners.jpg"},
+    {id:"195329409/Korn-Longread-Webdesign-Project", name:"Korn", c:"--mr-robin", dark:false,
+      en:["Web design","Wasteland Voice, a longread about the band"], ua:["Веб-дизайн","Wasteland Voice, лонгрід про гурт"], img:"img/korn-2.jpg"},
+    {id:"249357795/TransferNow-Airport-Transfer-Planning-App", name:"TransferNow", c:"--seaweed", dark:true,
+      en:["App UI","Airport transfer planning app"], ua:["UI застосунку","Застосунок для планування трансферу"], img:"img/transfernow.jpg"}
+  ];
+
+  var T = {
+    en:{nav_work:"Work",nav_rev:"Reviews",nav_about:"About",nav_contact:"Contact",email_me:"Email me",
+      eyebrow:"Marketing & Visual Designer · Bratislava",
+      h1:"I make complex products look clear and sell.",
+      sub:"6+ years of marketing design for IT, SaaS, fintech and EdTech: case studies, executive decks, landing pages and ad creatives.",
+      see_work:"See work",photo_alt:"Kateryna Katarovska",
+      status:"Status",status_h:"Open to new projects",status_p:"Remote or freelance: marketing design, presentations, landing pages, ad creatives.",
+      exp:"Experience",yrs:"6+ yrs",exp_p:"60+ case studies, 30+ executive presentations (one for a Big 4 firm) and dozens of landing pages.",
+      feat_label:"Featured · E-commerce",feat_desc:"Website redesign.",
+      tools:"Tools",ai:"AI tools",
+      bq:"She doesn’t just make things look good, she makes them work.",bq_by:"Iryna P., colleague at Onix-Systems",
+      industries:"Industries",elsewhere:"Elsewhere",bh_stats:"6.8K views",
+      talk:"Got a project?",talk_h:"Start a project →",
+      sel_work:"Selected work",count:"9 projects · Behance",view:"View",
+      rev_h:"Kind words",rev_note:"3 recommendations",
+      q1_pull:"A secret weapon I call when I want an outside of the box thinker who can execute on elegant design.",
+      q1_a:"Kateryna has been a freelance connection for me on a project basis over the past 10 years. She is an absolute delight to work with – talented, versatile, attention to detail, and follow through. She is able to seamlessly navigate work on multiple mediums. Software UX, agency design, digital art, and physical art.",
+      q1_b:"I work in software product management and own a music recording studio. Kateryna is a secret weapon I call when I want an outside of the box thinker who can execute on elegant design.",
+      q1_who:"Product manager & studio owner · USA",
+      q2_pull:"The marketing materials she created were instrumental in my communication with the company’s top clients.",
+      q2_a:"I had the pleasure of working with Kate on several marketing and sales presentations, and her contribution was truly helpful. She has a nice ability to structure complex content and translate technical details into clear, business-focused visual messaging. The marketing materials she created were instrumental in my communication with the company’s top clients and helped me present our company’s value with confidence and clarity.",
+      q2_b:"Her approach significantly improved alignment with the client, negotiations, and overall quality of information delivery.",
+      q2_who:"Sales presentations · Poland",
+      q3_pull:"She doesn’t just make things look good, she makes them work.",
+      q3_a:"I had the pleasure of working with Kateryna at Onix-Systems. Kateryna brings a rare combination of design talent and strategic thinking — she doesn’t just make things look good, she makes them work. With a background spanning marketing design, UX/UI, and product thinking, she has a natural ability to translate complex ideas into clear, intuitive user experiences. What stands out most is how she connects visual decisions to real business goals, keeping both user needs and conversion in mind at every step.",
+      q3_b:"I’d recommend Kateryna to any team that values designers who think beyond aesthetics and take ownership of the full experience.",
+      q3_who:"Colleague at Onix-Systems · Ukraine",
+      about_h:"Started in newsrooms. Stayed for the layout.",
+      about_p1:"I hold a specialist degree in layout and typesetting and worked as a TV journalist and in print media in Ukraine, then moved into newspaper layout, content and illustration. For six-plus years I designed for the marketing team of an IT outsourcing company, from blog illustrations to executive decks.",
+      about_p2:"The journalist’s habit stayed: every layout starts with what the reader needs to understand. I talk to developers directly and build Figma systems that teams actually use.",
+      t1_y:"2026 — now",t1_r:"Graphic Designer",t1_w:"Brand book and marketing design system for a B2B software company: website, decks, case studies.",
+      t2_r:"Marketing Designer",t2_w:"Case studies, executive presentations, landing pages, banners, lead magnets.",
+      t3_r:"Layout Designer and Content Manager",t3_w:"Weekly newspaper layout and print production, plus content: editing articles, managing publications and the newspaper’s website.",
+      t4_y:"Before 2018",t4_r:"Journalism",t4_o:"TV & print media, Ukraine",t4_w:"Reporting and editorial work, then self-taught illustration.",
+      c_h:"Have a project in mind? Let’s talk.",c_sub:"Tell me about your product, deck or campaign.",copy:"Copy email",copied:"Copied",copy_fail:"Selected. Press ⌘C to copy."},
+    ua:{nav_work:"Роботи",nav_rev:"Відгуки",nav_about:"Про мене",nav_contact:"Контакти",email_me:"Написати",
+      eyebrow:"Маркетингова та візуальна дизайнерка · Братислава",
+      h1:"Роблю складні продукти зрозумілими й такими, що продають.",
+      sub:"6+ років маркетингового дизайну для IT, SaaS, фінтеху та EdTech: кейси, презентації для керівництва, лендинги й рекламні креативи.",
+      see_work:"Роботи",photo_alt:"Катерина Катаровська",
+      status:"Статус",status_h:"Відкрита до нових проєктів",status_p:"Віддалено або фриланс: маркетинговий дизайн, презентації, лендинги, рекламні креативи.",
+      exp:"Досвід",yrs:"6+ років",exp_p:"60+ кейсів, 30+ презентацій для керівництва (зокрема для компанії Big 4) і десятки лендингів.",
+      feat_label:"Обраний кейс · E-commerce",feat_desc:"Редизайн сайту.",
+      tools:"Інструменти",ai:"AI-інструменти",
+      bq:"Вона не просто робить гарно, вона робить так, щоб це працювало.",bq_by:"Ірина П., колега в Onix-Systems",
+      industries:"Індустрії",elsewhere:"Де ще",bh_stats:"6.8K переглядів",
+      talk:"Є проєкт?",talk_h:"Обговорити проєкт →",
+      sel_work:"Вибрані роботи",count:"9 проєктів · Behance",view:"Дивитись",
+      rev_h:"Відгуки",rev_note:"Переклад з англійської",
+      q1_pull:"Таємна зброя, яку я кличу, коли потрібна людина з нестандартним мисленням, що вміє втілити елегантний дизайн.",
+      q1_a:"Катерина вже 10 років працює зі мною як фрилансерка на проєктній основі. Співпрацювати з нею — суцільне задоволення: талановита, різнобічна, уважна до деталей і завжди доводить справу до кінця. Вона легко переходить між різними медіа: UX для софту, агентський дизайн, діджитал-арт і фізичне мистецтво.",
+      q1_b:"Я працюю в продакт-менеджменті софту й маю власну студію звукозапису. Катерина — моя таємна зброя, яку я кличу, коли потрібна людина з нестандартним мисленням, що вміє втілити елегантний дизайн.",
+      q1_who:"Продакт-менеджер і власник студії · США",
+      q2_pull:"Маркетингові матеріали, які вона створила, стали ключовими в моїй комунікації з топ-клієнтами компанії.",
+      q2_a:"Мені пощастило працювати з Катериною над кількома маркетинговими й сейлз-презентаціями, і її внесок справді допоміг. Вона вміє структурувати складний контент і перекладати технічні деталі на зрозумілу, бізнес-орієнтовану візуальну мову. Маркетингові матеріали, які вона створила, стали ключовими в моїй комунікації з топ-клієнтами компанії й допомогли впевнено та чітко показувати цінність нашої компанії.",
+      q2_b:"Її підхід помітно покращив порозуміння з клієнтом, переговори й загальну якість подачі інформації.",
+      q2_who:"Сейлз-презентації · Польща",
+      q3_pull:"Вона не просто робить гарно, вона робить так, щоб це працювало.",
+      q3_a:"Мені пощастило працювати з Катериною в Onix-Systems. Катерина поєднує рідкісне: дизайнерський талант і стратегічне мислення — вона не просто робить гарно, вона робить так, щоб це працювало. З досвідом у маркетинговому дизайні, UX/UI та продуктовому мисленні вона природно перетворює складні ідеї на зрозумілий, інтуїтивний досвід. Найбільше вирізняє те, як вона пов’язує візуальні рішення з реальними бізнес-цілями й на кожному кроці тримає в голові і потреби користувачів, і конверсію.",
+      q3_b:"Я рекомендую Катерину будь-якій команді, яка цінує дизайнерів, що мислять ширше за естетику й беруть відповідальність за весь досвід.",
+      q3_who:"Колега в Onix-Systems · Україна",
+      about_h:"Почала в редакціях. Лишилася заради верстки.",
+      about_p1:"Маю ступінь спеціаліста з макетування та верстки, працювала журналісткою на телебаченні й у друкованих медіа в Україні, а потім перейшла у верстку газети, контент та ілюстрацію. Понад шість років працювала дизайнеркою в маркетингу IT-аутсорсингової компанії: від ілюстрацій для блогу до презентацій для керівництва.",
+      about_p2:"Звичка журналістки лишилася: кожен макет починаю з того, що читач має зрозуміти. Напряму спілкуюся з розробниками й будую Figma-системи, якими команда справді користується.",
+      t1_y:"2026 — зараз",t1_r:"Графічна дизайнерка",t1_w:"Брендбук і маркетингова дизайн-система для B2B-компанії: сайт, презентації, кейси.",
+      t2_r:"Маркетингова дизайнерка",t2_w:"Кейси, презентації для керівництва, лендинги, банери, лід-магніти.",
+      t3_r:"Верстальниця й контент-менеджерка",t3_w:"Верстка щотижневої газети й підготовка до друку, а також контент: редагування матеріалів, ведення публікацій і сайту газети.",
+      t4_y:"До 2018",t4_r:"Журналістика",t4_o:"ТБ і друковані медіа, Україна",t4_w:"Репортажна й редакторська робота, потім ілюстрація самотужки.",
+      c_h:"Маєте проєкт? Напишіть мені.",c_sub:"Розкажіть про ваш продукт, презентацію чи кампанію.",copy:"Скопіювати email",copied:"Скопійовано",copy_fail:"Виділено. Натисніть ⌘C, щоб скопіювати."}
+  };
+
+  var lang = "en";
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]})}
+
+  function renderWork(){
+    var g = document.getElementById("work-grid");
+    g.innerHTML = P.map(function(p){
+      var t = p[lang];
+      var style = "background-color:var("+p.c+")" + (p.img ? ";background-image:url('"+p.img+"')" : "");
+      return '<article class="card"><a href="#'+p.slug+'">'+
+        '<div class="blockc'+(p.dark?' on-dark':'')+(p.img?' has-img':'')+'" style="'+style+'">'+
+          '<p class="label">'+esc(t[0])+'</p>'+
+          '<span class="rb" aria-hidden="true">↗</span>'+
+          '<h3>'+esc(p.name)+'</h3>'+
+        '</div>'+
+        '<div class="cap"><p><b style="font-weight:500">'+esc(p.name)+'</b> · '+esc(t[1])+'</p><span class="label">'+T[lang].view+'</span></div>'+
+      '</a></article>';
+    }).join("");
+  }
+
+  var SLUG = {"143151485":"honna","182465797":"decisive","253892191":"marketing","257344473":"corevia","257264781":"chicken-road","254929851":"nibble","257238381":"igaming-banners","195329409":"korn","249357795":"transfernow"};
+  P.forEach(function(p){ p.slug = SLUG[p.id.split("/")[0]]; });
+
+  var CT = {
+    en:{back:"All work",client:"Client",role:"Role",year:"Year",type:"Type",result:"In numbers",overview:"Overview",challenge:"The challenge",approach:"The approach",outcome:"The outcome",scope:"Scope",visual:"Visual system",solution:"The solution",results:"Results",
+        full:"See the full case on Behance",imgs:function(n){return n+" images, process and details"},next:"Next project",cta_h:"Have a project like this?",cta_p:"Tell me about your product, deck or campaign."},
+    ua:{back:"Усі роботи",client:"Клієнт",role:"Роль",year:"Рік",type:"Тип",result:"У цифрах",overview:"Про проєкт",challenge:"Задача",approach:"Підхід",outcome:"Результат",scope:"Що я робила",visual:"Візуальна система",solution:"Рішення",results:"Підсумок",
+        full:"Повний кейс на Behance",imgs:function(n){return n+(n<5?" зображення":" зображень")+", процес і деталі"},next:"Наступний проєкт",cta_h:"Маєте схожий проєкт?",cta_p:"Розкажіть про ваш продукт, презентацію чи кампанію."}
+  };
+
+  var CASES = {
+    "honna":{year:"2022",imgs:7,
+      gallery:["img/honna/01.jpg",{row:[{i:"img/honna/02.jpg"},{i:"img/honna/06.jpg"}]},{row:[{i:"img/honna/03.jpg"},{i:"img/honna/04.jpg"}]},"img/honna/05.jpg",{mid:"img/honna/07.jpg"}],
+      en:{sub:"UX/UI case study for a London sustainable sleepwear brand: faster product discovery and a store that feels as considered as the product.",meta:[["type","Self-directed UX/UI case study"],["role","UX/UI designer"],["year","2022"]],stat:["3","goals behind the redesign"],
+        body:[["overview","HONNA is a London-based sustainable sleepwear brand. The case study explores how its e-commerce experience could better support product discovery and reflect the brand’s premium, considered positioning."],
+              ["challenge","The product listing page had no filtering or sorting, so customers browsing the full catalogue could not narrow results by size, colour or category. Finding a specific product was slower than it needed to be, especially on mobile. The visual language also leaned generic, with a template feel that did not carry HONNA’s quiet-luxury identity through to the shopping experience."],
+              ["approach","The redesign focused on three outcomes: faster discovery by filtering and sorting the catalogue by category, size and colour; a visual identity that matches HONNA’s quiet-luxury positioning; and less purchase hesitation thanks to clearer, more scannable product pages."],
+              ["solution","Filter and sort let customers narrow the catalogue instantly by category, size and colour. A structured product page groups details, care and size guide into clear collapsible sections. The same system runs across home, catalogue, product page, cart and mobile, in muted editorial tones with a refined serif display face."],
+              ["results","A self-directed case study built on the live HONNA site, used to practise turning a real UX gap into a concrete, brand-considered solution. Working inside an existing brand’s visual language pushed every typography and layout decision to be justified by both usability and brand fit. The next step would be user testing of the filter flow to confirm it cuts browsing time."]]},
+      ua:{sub:"UX/UI кейс для лондонського бренду екологічного одягу для сну: швидший пошук товарів і магазин, такий же продуманий, як сам продукт.",meta:[["type","Самостійний UX/UI кейс"],["role","UX/UI-дизайнерка"],["year","2022"]],stat:["3","цілі редизайну"],
+        body:[["overview","HONNA — лондонський бренд екологічного одягу для сну. Кейс досліджує, як його онлайн-магазин міг би краще допомагати знаходити товари й передавати преміальне, виважене позиціонування бренду."],
+              ["challenge","На сторінці каталогу не було фільтрів і сортування, тож покупці не могли звузити вибір за розміром, кольором чи категорією. Знайти конкретну річ було довше, ніж треба, особливо з телефона. Візуальна мова теж була загальною, з відчуттям шаблону, і не передавала айдентику «тихої розкоші»."],
+              ["approach","Редизайн мав три цілі: швидший пошук завдяки фільтрам і сортуванню за категорією, розміром і кольором; айдентика, що відповідає позиціонуванню «тихої розкоші»; менше сумнівів перед покупкою завдяки чіткішим сторінкам товару."],
+              ["solution","Фільтри й сортування дозволяють миттєво звузити каталог за категорією, розміром і кольором. Сторінка товару структурована: деталі, догляд і таблиця розмірів зібрані в зрозумілі блоки, що розгортаються. Та сама система працює на головній, у каталозі, на сторінці товару, в кошику й на мобайлі, в приглушених редакційних тонах з вишуканою антиквою."],
+              ["results","Самостійний кейс на основі живого сайту HONNA, щоб попрактикуватися перетворювати реальну UX-проблему на конкретне рішення в дусі бренду. Робота в межах наявної візуальної мови змушувала обґрунтовувати кожне рішення щодо шрифтів і верстки і зручністю, і відповідністю бренду. Наступним кроком було б юзер-тестування фільтрів, щоб перевірити, чи вони справді скорочують час пошуку."]]}},
+    "decisive":{year:"2023",imgs:5,
+      gallery:[{row:[{i:"img/decisive/01.jpg"},{i:"img/decisive/02.jpg"}]},{row:[{i:"img/decisive/03.jpg"},{i:"img/decisive/04.jpg"}]},"img/decisive/05.jpg"],
+      en:{sub:"Website redesign for Decisive, an independent investment and wealth advisory firm.",meta:[["client","Decisive"],["role","UI/UX designer"],["year","2023"]],stat:["1.6K","views on Behance"],
+        body:[["approach","A large and complex project, taken end to end: it started with an analysis of competitors’ websites and ended with dozens of design options for the case pages and a functional prototype."],
+              ["visual","Cobalt blue carries the identity, supported by white, grey, a sharp red for labels and a teal-to-cobalt gradient. Glossy 3D blue forms, distorted type and editorial photography give a financial brand a bold, modern feel. The system covers desktop and mobile: insights, team, vision and mission, offices and contacts, plus print."]]},
+      ua:{sub:"Редизайн сайту Decisive, незалежної компанії з інвестиційного й фінансового консалтингу.",meta:[["client","Decisive"],["role","UI/UX-дизайнерка"],["year","2023"]],stat:["1.6K","переглядів на Behance"],
+        body:[["approach","Великий і складний проєкт, який я вела від початку до кінця: від аналізу сайтів конкурентів до десятків варіантів дизайну сторінок кейсів і функціонального прототипу."],
+              ["visual","Айдентику тримає кобальтовий синій, а підтримують білий, сірий, різкий червоний для лейблів і градієнт від бірюзового до кобальту. Глянцеві 3D-форми, деформована типографіка й редакційна фотографія роблять фінансовий бренд сміливим і сучасним. Система охоплює десктоп і мобайл: інсайти, команду, візію й місію, офіси й контакти, а також друк."]]}},
+    "marketing":{year:"2019–2026",imgs:8,hero:"img/marketing/01.jpg",gallery:["02","03","04","05","06","07","08"].map(function(n){return "img/marketing/"+n+".jpg"}),
+      en:{sub:"Illustrations, case studies, decks, lead magnets and print for a software development company.",meta:[["client","Onix-Systems"],["role","Marketing designer"],["year","2019–2026"]],stat:["60+","case studies designed for the company website"],
+        body:[["challenge","Keep one consistent visual language across very different formats, audiences and goals, while fitting every piece to its own purpose."],
+              ["approach","I developed visual concepts, drew illustrations, built layouts and prepared final assets for digital and print. Together with the marketing and content teams I turned complex technology and business topics into clear, engaging visuals."],
+              ["visual","One brand palette, Electric Blue, Aquamarine, Celeste, Platinum and Light Blue, ties everything together: ad banners, sales decks, case study pages, blog and news illustrations, business cards and merch. Each piece is adapted to its audience while staying inside the company’s visual identity."],
+              ["scope","Visual concepts, editorial design, illustration, presentation design, layout and final asset preparation."]]},
+      ua:{sub:"Ілюстрації, кейси, презентації, лід-магніти й друк для компанії з розробки ПЗ.",meta:[["client","Onix-Systems"],["role","Маркетингова дизайнерка"],["year","2019–2026"]],stat:["60+","кейсів для сайту компанії"],
+        body:[["challenge","Тримати єдину візуальну мову в дуже різних форматах, для різних аудиторій і цілей, і водночас підлаштовувати кожен матеріал під його задачу."],
+              ["approach","Я розробляла візуальні концепції, малювала ілюстрації, верстала макети й готувала фінальні файли для діджиталу та друку. Разом з маркетингом і контент-командою перетворювала складні технологічні й бізнесові теми на зрозумілі, живі візуали."],
+              ["visual","Одна брендова палітра, Electric Blue, Aquamarine, Celeste, Platinum і Light Blue, зшиває все докупи: рекламні банери, сейлз-презентації, сторінки кейсів, ілюстрації для блогу й новин, візитки та мерч. Кожен матеріал адаптований під свою аудиторію, але лишається в межах айдентики компанії."],
+              ["scope","Візуальні концепції, редакційний дизайн, ілюстрація, презентації, верстка й підготовка фінальних файлів."]]}},
+    "corevia":{year:"2026",imgs:9,hero:"img/corevia/01.jpg",gallery:["02","03","04","05","06","07","08","09"].map(function(n){return "img/corevia/"+n+".jpg"}),
+      en:{sub:"A 20-slide pitch deck for an AI engineering partner to regulated enterprises.",meta:[["client","Corevia Labs"],["role","Presentation designer"],["year","2026"]],stat:["20","slides, one visual system"],
+        body:[["challenge","Explain Corevia’s AI engineering offering to enterprise decision-makers and connect technical capabilities with clear business value and a practical path to production. Security, delivery, pricing and performance metrics all needed space without overwhelming the audience."],
+              ["approach","The deck is built like a pitch: problem, solution, proof, next step. Each section answers one question a CIO asks before signing, and navigation tabs on every slide show where the audience is in the story. Market sizing, case metrics and growth charts sit in modular cards, one claim per card."],
+              ["visual","A calm enterprise base of ink and canvas with one confident lime accent. Poppins Medium carries headlines and numbers, Inter carries body copy and data, and a lavender highlight marks the key phrase in every headline. Light and dark slides alternate to keep the rhythm."],
+              ["outcome","The deck ends with a decision, not a thank-you: objections are answered before the final slide, which closes on a concrete next step, a 2-week scoping sprint with direct contacts."]]},
+      ua:{sub:"Пітч-дек на 20 слайдів для AI-інженерної компанії, що працює з регульованими галузями.",meta:[["client","Corevia Labs"],["role","Дизайнерка презентацій"],["year","2026"]],stat:["20","слайдів, одна візуальна система"],
+        body:[["challenge","Пояснити пропозицію Corevia керівникам великих компаній: пов’язати технічні можливості з бізнес-цінністю й показати реальний шлях до продакшну. Безпека, процес, ціни й метрики мали поміститися так, щоб не перевантажити аудиторію."],
+              ["approach","Дек побудований як пітч: проблема, рішення, докази, наступний крок. Кожен розділ відповідає на одне питання, яке CIO ставить перед підписанням, а навігаційні таби на кожному слайді показують, де аудиторія в історії. Розміри ринку, метрики кейсів і графіки зібрані в модульні картки, по одному твердженню на картку."],
+              ["visual","Спокійна ентерпрайз-база з чорнильного й світлого полотна з одним упевненим лаймовим акцентом. Poppins Medium для заголовків і цифр, Inter для тексту й даних, а лавандове виділення підсвічує ключову фразу в кожному заголовку. Світлі й темні слайди чергуються й тримають ритм."],
+              ["outcome","Дек закінчується рішенням, а не «дякую»: заперечення закриті до фінального слайда, а він веде до конкретного кроку, двотижневого scoping-спринту з прямими контактами."]]}},
+    "chicken-road":{year:"2026",imgs:7,hero:"img/chicken/01.jpg",
+      gallery:["img/chicken/02.jpg","img/chicken/03.jpg",{row:[1,2,3].map(function(n){return {v:"img/chicken/loop"+n+".mp4",poster:"img/chicken/poster"+n+".jpg"}})},"img/chicken/05.jpg"],
+      en:{sub:"Concept ad campaign for an arcade-style mobile game, built for the US market.",meta:[["client","Concept project"],["role","Visual designer"],["year","2026"]],stat:["5 + 1","feed creatives and a key visual"],
+        body:[["challenge","Build a whole set around one message, “Make your next move”, for Chicken Road, a fast arcade game where a brave chicken crosses a road of glowing multipliers. Every creative had to stop the scroll and drive an instant click."],
+              ["approach","I explored five visual angles with a shared toolkit: a neon night city, golden multiplier tiles and a bold green call to action. Characters and scenes were generated with AI, then refined into a consistent visual system in Figma."],
+              ["visual","Midnight navy, neon green, gold and pure white. A condensed sans and a gold italic serif carry the message, and every creative keeps the same headline, button and tile language."],
+              ["outcome","A 16:9 key visual and five 1:1 feed creatives (Coin Rush, Golden Leap, Neon Diner, Golden Path and Night Run), with animated versions for social."]],
+        note:"Concept project for my portfolio. Not affiliated with or endorsed by the game’s developer."},
+      ua:{sub:"Концептуальна рекламна кампанія для мобільної аркадної гри, для ринку США.",meta:[["client","Концепт-проєкт"],["role","Візуальна дизайнерка"],["year","2026"]],stat:["5 + 1","креативів для стрічки й key visual"],
+        body:[["challenge","Зібрати цілий набір навколо одного меседжу «Make your next move» для Chicken Road, швидкої аркадної гри про хоробру курку, що переходить дорогу з сяйливих множників. Кожен креатив мав зупинити скрол і викликати миттєвий клік."],
+              ["approach","Я дослідила п’ять візуальних підходів на спільних елементах: неонове нічне місто, золоті плитки-множники й яскрава зелена кнопка. Персонажів і сцени згенерувала з AI, а потім довела до цілісної візуальної системи у Figma."],
+              ["visual","Опівнічний синій, неоновий зелений, золото й чисто білий. Вузький гротеск і золотий курсивний антиква несуть меседж, а всі креативи тримають однаковий заголовок, кнопку й мову плиток."],
+              ["outcome","Key visual 16:9 і п’ять креативів 1:1 для стрічки (Coin Rush, Golden Leap, Neon Diner, Golden Path і Night Run), плюс анімовані версії для соцмереж."]],
+        note:"Концепт-проєкт для портфоліо. Не пов’язаний з розробником гри й не схвалений ним."}},
+    "nibble":{year:"2026",imgs:6,
+      gallery:["img/nibble/02.jpg","img/nibble/03.jpg",{mid:"img/nibble/04.jpg"},"img/nibble/05.jpg","img/nibble/06.jpg"],
+      en:{sub:"Paid social campaign for a bite-sized learning app: four creative hypotheses and a connected three-step funnel.",meta:[["client","Nibble"],["role","Creative strategy, art direction"],["year","2026"]],stat:["4","creative angles across a 3-step funnel"],
+        body:[["overview","Nibble is a bite-sized learning app for curious minds. It helps people learn something new in a few minutes through short lessons on psychology, art, history, science and more."],
+              ["challenge","Create a cohesive paid social campaign that turns the product’s value into clear, memorable concepts and works across different stages of the funnel, for Gen Z and Millennial users (18–35) who want quick, low-friction ways to learn something useful or interesting."],
+              ["approach","People don’t necessarily want more education. They want what knowledge gives them. Instead of one generic learning-app message, I explored four motivations, each with its own concept: lifestyle (Matcha), social payoff (Restaurant), time (Subway) and curiosity (Van Gogh)."],
+              ["visual","Every concept was adapted to Instagram Story and Facebook Ad formats, keeping hierarchy, focal point and readability across aspect ratios: the drink stays the hero in Matcha, the character’s reaction in Restaurant, the time message in Subway and the artwork in Van Gogh."],
+              ["outcome","I took the Social Payoff direction further into a three-step sequence, from desire to understanding to action: TOFU creates aspiration, MOFU explains the product and BOFU drives the first lesson. One product, different motivations, connected messages."]]},
+      ua:{sub:"Таргетована кампанія для застосунку мікронавчання: чотири креативні гіпотези й зв’язана трикрокова воронка.",meta:[["client","Nibble"],["role","Креативна стратегія, арт-дирекшн"],["year","2026"]],stat:["4","креативні підходи в трикроковій воронці"],
+        body:[["overview","Nibble — застосунок мікронавчання для допитливих. Він допомагає дізнатися щось нове за кілька хвилин через короткі уроки з психології, мистецтва, історії, науки тощо."],
+              ["challenge","Створити цілісну рекламну кампанію в соцмережах, яка перетворює цінність продукту на чіткі, запам’ятовувані концепції й працює на різних етапах воронки, для аудиторії Gen Z і мілениалів (18–35), які хочуть швидко й без зусиль дізнаватися щось корисне чи цікаве."],
+              ["approach","Людям не обов’язково потрібно більше освіти. Їм потрібне те, що дають знання. Замість одного загального меседжу я дослідила чотири мотивації, кожна зі своєю концепцією: лайфстайл (Matcha), соціальна вигода (Restaurant), час (Subway) і цікавість (Van Gogh)."],
+              ["visual","Кожну концепцію адаптувала під формати Instagram Story й Facebook Ad, зберігаючи ієрархію, фокус і читабельність у різних пропорціях: у Matcha героєм лишається напій, у Restaurant — реакція персонажа, у Subway — меседж про час, у Van Gogh — картина."],
+              ["outcome","Напрям Social Payoff я розвинула в трикрокову послідовність від бажання до розуміння й дії: TOFU створює прагнення, MOFU пояснює продукт, BOFU веде до першого уроку. Один продукт, різні мотивації, зв’язані меседжі."]]}},
+    "igaming-banners":{year:"2026",imgs:4,
+      gallery:[{vid:"img/banners/loop.mp4",poster:"img/banners/poster.jpg"},"img/banners/01.jpg","img/banners/02.jpg","img/banners/03.jpg"],
+      en:{sub:"Banner system for a fictional iGaming brand: three campaigns, three mascots, seven placements each.",meta:[["client","Concept project"],["role","Visual designer"],["year","2026"]],stat:["21","banners across 3 campaigns"],
+        body:[["challenge","Build a banner system that keeps one recognisable look across very different placements, from a 1920×600 desktop hero to a 320×100 mobile banner, while giving each promo its own character."],
+              ["approach","Three AI-generated mascots anchor three campaigns: a cowboy with a golden reel machine for the Welcome Bonus, a wizard for the seasonal Spin & Win thunder event, and a gentleman with a treasure chest for the weekly Card Nights tournament."],
+              ["visual","A deep purple base with radiating light, gold coins and a chunky gold headline, a pill for the secondary offer and a gold CTA button. The same layout logic is rebuilt for each size, so the offer, character and button stay readable in every crop."],
+              ["outcome","Seven placements per campaign: desktop hero slider 1920×600, social square 1080×1080, half page 300×600, billboard 970×250, medium rectangle 300×250, leaderboard 728×90 and mobile banner 320×100, plus an animated hero."]],
+        note:"Concept project for a fictional brand, created for my portfolio."},
+      ua:{sub:"Система банерів для вигаданого iGaming-бренду: три кампанії, три маскоти, сім розмірів у кожній.",meta:[["client","Концепт-проєкт"],["role","Візуальна дизайнерка"],["year","2026"]],stat:["21","банер у 3 кампаніях"],
+        body:[["challenge","Побудувати систему банерів, яка тримає один упізнаваний стиль у дуже різних розмірах, від десктопного hero 1920×600 до мобільного 320×100, і водночас дає кожній акції свій характер."],
+              ["approach","Три маскоти, згенеровані з AI, тримають три кампанії: ковбой із золотим слот-автоматом для Welcome Bonus, чарівник для сезонної події Spin & Win і джентльмен зі скринею скарбів для щотижневого турніру Card Nights."],
+              ["visual","Глибока фіолетова база з променями світла, золоті монети й масивний золотий заголовок, плашка для додаткової пропозиції та золота кнопка. Ту саму логіку макета я перебудовувала під кожен розмір, тож пропозиція, персонаж і кнопка читаються в будь-якому кропі."],
+              ["outcome","Сім розмірів у кожній кампанії: десктопний слайдер 1920×600, соцмережі 1080×1080, half page 300×600, billboard 970×250, medium rectangle 300×250, leaderboard 728×90 і мобільний банер 320×100, плюс анімований hero."]],
+        note:"Концепт-проєкт для вигаданого бренду, створений для портфоліо."}},
+    "korn":{year:"2024",imgs:7,
+      gallery:[{row:[{i:"img/korn/01.jpg"},{i:"img/korn/02.jpg"}]},{row:[{i:"img/korn/03.jpg"},{i:"img/korn/04.jpg"}]},{row:[{i:"img/korn/05.jpg"},{i:"img/korn/06.jpg"}]},"img/korn/07.jpg"],
+      en:{sub:"Wasteland Voice: a longread web page about the band’s sound, story and legacy.",meta:[["type","Longread web page"],["role","Web designer"],["year","2024"]],stat:["5","chapters from genesis to legacy"],
+        body:[["overview","A longread that walks through the layers of sound behind the evolution of Korn, from a band of high school friends in Bakersfield to the pioneers of nu-metal."],
+              ["approach","The page is built as a story in chapters: an introduction, the Genesis of Korn (1989–1993), the Mainstream Breakthrough (1996–1998), a discography and a conclusion. Big pull quotes and dates mark each turn of the story, so the page reads like a magazine feature rather than a fan wiki."],
+              ["visual","Red and black only, with a bold condensed typeface, rough red brush marks, torn-paper edges and black-and-white photography toned in red. A chrome corn cob and a framed live shot add collage moments between chapters."],
+              ["outcome","A full desktop longread with a mobile version of every chapter."]]},
+      ua:{sub:"Wasteland Voice: лонгрід про звучання, історію й спадщину гурту.",meta:[["type","Лонгрід"],["role","Веб-дизайнерка"],["year","2024"]],stat:["5","розділів від заснування до спадщини"],
+        body:[["overview","Лонгрід про шари звучання, з яких складалася еволюція Korn: від гурту шкільних друзів у Бейкерсфілді до піонерів ню-металу."],
+              ["approach","Сторінка побудована як історія в розділах: вступ, заснування гурту (1989–1993), прорив у мейнстрим (1996–1998), дискографія й висновок. Великі цитати й дати позначають кожен поворот історії, тож сторінка читається як журнальний матеріал, а не фанатська вікі."],
+              ["visual","Лише червоний і чорний, насичений вузький шрифт, грубі червоні мазки пензля, рвані краї паперу й чорно-біла фотографія з червоним тонуванням. Хромований качан кукурудзи й живе фото в рамі додають колажні акценти між розділами."],
+              ["outcome","Повний десктопний лонгрід і мобільна версія кожного розділу."]]}},
+    "transfernow":{year:"2026",imgs:6,
+      gallery:[{row:[{i:"img/transfernow/01.jpg"},{i:"img/transfernow/02.jpg"}]},{row:[{i:"img/transfernow/03.jpg"},{i:"img/transfernow/04.jpg"}]},"img/transfernow/05.jpg"],
+      en:{sub:"Airport transfer planning service on an interactive map, for web and mobile. Clarity, not just choices.",meta:[["type","UX/UI case study"],["role","Product designer"],["year","2026 · 3+ months"]],stat:["3 → 1","apps consolidated into a single transfer flow"],
+        body:[["overview","An airport transfer planning service built on top of an interactive map platform. Rather than overwhelming travellers with options, it guides them to the most suitable choice for their trip: time, budget, luggage and group size."],
+              ["challenge","Research showed four key problems: a fragmented planning experience across 3–4 apps, unpredictable real-time conditions like surge pricing and late flights, no guidance at arrival about which exit or floor to use, and one-size-fits-all results that ignore luggage, group size and budget. Every respondent switched between several services, and about 70% named price mismatch as their top frustration."],
+              ["approach","13 in-depth interviews across 4 traveller segments (budget, comfort, family, foreign traveller) and a 19-person survey, then empathy maps, personas, a customer journey map, information architecture, wireframes and an interactive prototype over 12 weeks. Two personas guided decisions: Alex, a business traveller who wants the real price and zero surprises, and Jessica, a mother with two kids and four bags who needs the right car and step-by-step airport navigation."],
+              ["outcome","Transfer planning went from 3+ apps to a single flow, with the real price upfront, options matched to the trip and step-by-step navigation for the arrival moment that 65% of travellers found most disorienting. All 6 core pain points from research are addressed in the final UI for web and mobile."]]},
+      ua:{sub:"Сервіс планування трансферу з аеропорту на інтерактивній карті, для вебу й мобайлу. Ясність, а не просто вибір.",meta:[["type","UX/UI кейс"],["role","Продуктова дизайнерка"],["year","2026 · 3+ місяці"]],stat:["3 → 1","застосунки, зведені в один сценарій трансферу"],
+        body:[["overview","Сервіс планування трансферу з аеропорту на основі інтерактивної карти. Замість того щоб засипати мандрівника варіантами, він підводить до найкращого вибору під конкретну поїздку: час, бюджет, багаж і кількість людей."],
+              ["challenge","Дослідження показало чотири головні проблеми: планування розкидане по 3–4 застосунках, умови змінюються в реальному часі (surge pricing, затримки рейсів), після прильоту немає підказок, куди йти й на якому поверсі, а результати однакові для всіх, незалежно від багажу, кількості людей і бюджету. Усі опитані перемикалися між кількома сервісами, а близько 70% назвали головною проблемою розбіжність цін."],
+              ["approach","13 глибинних інтерв’ю в 4 сегментах мандрівників (бюджетні, комфорт, сім’ї, іноземці) і опитування 19 людей, далі empathy maps, персони, CJM, інформаційна архітектура, вайрфрейми й інтерактивний прототип за 12 тижнів. Рішення вели дві персони: Алекс, бізнес-мандрівник, якому потрібна реальна ціна й нуль сюрпризів, і Джессіка, мама з двома дітьми й чотирма валізами, якій потрібне правильне авто й покрокова навігація аеропортом."],
+              ["outcome","Планування трансферу перейшло з 3+ застосунків в один сценарій: реальна ціна наперед, варіанти під конкретну поїздку й покрокова навігація в момент прильоту, який 65% мандрівників назвали найбільш дезорієнтуючим. Усі 6 ключових болей із дослідження закриті у фінальному UI для вебу й мобайлу."]]}}
+  };
+
+  var current = null;
+  function renderCase(slug){
+    var c = CASES[slug], p = P.filter(function(x){return x.slug===slug})[0], t = c[lang], L = CT[lang];
+    var i = P.indexOf(p), nx = P[(i+1) % P.length];
+    var meta = t.meta.map(function(m){ return '<div><dt class="label">'+L[m[0]]+'</dt><dd>'+esc(m[1])+'</dd></div>'; }).join("");
+    var body = t.body.map(function(b){ return '<div class="case-row"><h3>'+L[b[0]]+'</h3><p>'+esc(b[1])+'</p></div>'; }).join("");
+    var light = !p.dark;
+    document.getElementById("case-view").innerHTML =
+      '<article class="case">'+
+        '<header class="case-head">'+
+          '<a class="back" href="#work"><span aria-hidden="true">←</span> '+L.back+'</a>'+
+          '<p class="label">'+esc(p[lang][0])+' · '+esc(c.year)+'</p>'+
+          '<h1 class="case-title">'+esc(p.name)+'</h1>'+
+          '<p class="case-sub">'+esc(t.sub)+'</p>'+
+        '</header>'+
+        '<div class="case-grid">'+
+          '<figure class="case-hero"><img src="'+(c.hero||p.img)+'" alt="'+esc(p.name)+'" width="1200" height="939"></figure>'+
+          '<aside class="case-side">'+
+            '<dl class="tile meta">'+meta+'</dl>'+
+            '<div class="tile stat'+(light?'':' on-dark')+'" style="background:var('+p.c+')"><p class="label">'+L.result+'</p><div class="push"><div class="fig">'+esc(t.stat[0])+'</div><p class="p">'+esc(t.stat[1])+'</p></div></div>'+
+          '</aside>'+
+        '</div>'+
+        '<div class="case-body">'+body+'</div>'+
+        (c.gallery ? '<div class="case-gallery">'+c.gallery.map(function(it,k){
+          if (it.vid) { var st = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches; return '<figure class="g-wide"><video src="'+it.vid+'" poster="'+it.poster+'" muted loop playsinline preload="metadata"'+(st?' controls':' autoplay')+' aria-label="'+esc(p.name)+' animated banner"></video></figure>'; }
+          if (it.mid) return '<figure class="g-mid"><img src="'+it.mid+'" alt="'+esc(p.name)+'" loading="lazy" decoding="async"></figure>';
+          if (typeof it === "string") return '<figure><img src="'+it+'" alt="'+esc(p.name)+' '+(k+2)+'" loading="lazy" decoding="async"></figure>';
+          var still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+          return '<div class="g-row" style="--n:'+it.row.length+'">'+it.row.map(function(v){ if (v.i) return '<figure><img src="'+v.i+'" alt="'+esc(p.name)+'" loading="lazy" decoding="async"></figure>';
+            return '<figure class="g-vid"><video src="'+v.v+'" poster="'+v.poster+'" muted loop playsinline preload="metadata"'+(still?' controls':' autoplay')+' aria-label="'+esc(p.name)+' animated creative"></video></figure>'; }).join('')+'</div>';
+        }).join('')+'</div>' : '')+
+        (t.note ? '<p class="case-note label">'+esc(t.note)+'</p>' : '')+
+        '<div class="case-cta">'+
+          '<a class="tile t-bh on-dark" href="https://www.behance.net/gallery/'+p.id+'" target="_blank" rel="noopener"><p class="label">Behance</p><div class="push"><h3>'+L.full+'</h3><p class="p">'+L.imgs(c.imgs)+'</p></div><span class="roundbtn" aria-hidden="true">↗</span></a>'+
+          '<a class="tile t-next on-dark" href="#'+nx.slug+'" style="background-image:url(\''+nx.img+'\')"><p class="label">'+L.next+'</p><div class="push"><h3>'+esc(nx.name)+' →</h3></div></a>'+
+          '<a class="tile t-talk" href="#contact"><p class="label">'+L.cta_h+'</p><div class="push"><h3>'+T[lang].talk_h+'</h3><span class="mail">kateryna.katarovska@gmail.com</span></div></a>'+
+        '</div>'+
+      '</article>';
+  }
+
+  function route(){
+    var h = (location.hash || "").slice(1);
+    var home = document.getElementById("home"), cv = document.getElementById("case-view");
+    var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (CASES[h]) {
+      current = h; renderCase(h);
+      home.hidden = true; cv.hidden = false; window.scrollTo(0,0);
+      if (cv.animate) cv.animate(reduce ? [{opacity:0},{opacity:1}] : [{opacity:0,transform:"translateY(14px)"},{opacity:1,transform:"none"}], {duration:450, easing:"cubic-bezier(0.23,1,0.32,1)"});
+    } else {
+      var was = current; current = null;
+      cv.hidden = true; cv.innerHTML = ""; home.hidden = false;
+      var el = (h && h !== "ua" && h !== "en") ? document.getElementById(h) : null;
+      if (el) el.scrollIntoView(); else if (was) window.scrollTo(0,0);
+    }
+  }
+  window.addEventListener("hashchange", route);
+
+  function setLang(l){
+    lang = (l === "ua") ? "ua" : "en";
+    document.documentElement.lang = lang === "ua" ? "uk" : "en";
+    document.querySelectorAll("[data-i]").forEach(function(el){
+      var v = T[lang][el.getAttribute("data-i")]; if (v != null) el.textContent = v;
+    });
+    document.querySelectorAll("[data-i-alt]").forEach(function(el){
+      var v = T[lang][el.getAttribute("data-i-alt")]; if (v != null) el.alt = v;
+    });
+    document.querySelectorAll(".lang button").forEach(function(b){ b.setAttribute("aria-pressed", String(b.dataset.lang === lang)); });
+    document.querySelector(".lang").dataset.active = lang;
+    renderWork();
+    if (current) renderCase(current);
+    try { localStorage.setItem("kk-lang", lang); } catch(e) {}
+  }
+
+  function switchLang(l){
+    if (l === lang) return;
+    var els = [document.querySelector("main"), document.querySelector(".links-c"), document.querySelector("footer")];
+    if (!els[0].animate) { setLang(l); return; }
+    var outs = els.map(function(e){ return e.animate([{opacity:1},{opacity:.2}], {duration:130, easing:"ease-out", fill:"forwards"}); });
+    outs[0].finished.then(function(){
+      setLang(l);
+      els.forEach(function(e,i){ outs[i].cancel(); e.animate([{opacity:.2},{opacity:1}], {duration:260, easing:"cubic-bezier(0.23,1,0.32,1)"}); });
+    });
+  }
+  document.querySelectorAll(".lang button").forEach(function(b){ b.addEventListener("click", function(){ switchLang(b.dataset.lang); }); });
+
+  var start = "en";
+  try { var s = localStorage.getItem("kk-lang"); if (s) start = s; } catch(e) {}
+  var h = (location.hash || "").replace("#","");
+  if (h === "ua" || h === "en") start = h;
+  setLang(start);
+  route();
+  setTimeout(function(){ document.body.classList.add("settled"); }, 1600);
+
+  var note = document.getElementById("copy-note");
+  document.getElementById("copy-btn").addEventListener("click", function(){
+    var txt = document.getElementById("mail").textContent.trim();
+    function fallback(){
+      var r = document.createRange(); r.selectNodeContents(document.getElementById("mail"));
+      var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      note.textContent = T[lang].copy_fail;
+    }
+    try {
+      navigator.clipboard.writeText(txt).then(function(){
+        var btn = document.getElementById("copy-btn");
+        btn.textContent = T[lang].copied + " ✓"; btn.classList.add("done");
+        if (btn.animate) btn.animate([{filter:"blur(2px)",opacity:.6},{filter:"blur(0px)",opacity:1}], {duration:220, easing:"ease-out"});
+        clearTimeout(btn._t);
+        btn._t = setTimeout(function(){ btn.textContent = T[lang].copy; btn.classList.remove("done"); }, 2000);
+      }, fallback);
+    } catch(e) { fallback(); }
+  });
+})();
+</script>
+
+</body>
+</html>

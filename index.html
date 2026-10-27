@@ -131,8 +131,10 @@ html[lang="uk"] .big{font-size:clamp(44px,4.4vw,70px)}
 
 .t-talk{grid-area:talk;background:var(--rescue);color:#fff}
 .t-talk .label{opacity:.85}
-.t-talk h3{font-size:clamp(44px,4.4vw,68px);letter-spacing:-.055em;line-height:.95}
-.t-talk .mail{display:block;margin-top:12px;font-size:var(--t-s);word-break:break-all}
+.t-talk{container-type:inline-size}
+.t-talk h3{font-size:clamp(34px,3.3vw,52px);font-size:clamp(32px,17cqi,64px);letter-spacing:-.045em;line-height:1;overflow-wrap:break-word;hyphens:manual}
+html[lang="uk"] .t-talk h3{font-size:clamp(30px,2.7vw,44px);font-size:clamp(28px,15cqi,58px)}
+.t-talk .mail{display:block;margin-top:14px;font-size:var(--t-s);overflow-wrap:normal;word-break:normal}
 
 
 @media (max-width:1100px){
@@ -205,7 +207,7 @@ h2{font-size:var(--t-xl);font-weight:500;letter-spacing:-.045em;line-height:1.02
 .contact h2{font-size:clamp(44px,6.6vw,100px);letter-spacing:-.055em;line-height:.98;max-width:12ch;margin-top:26px}
 .contact .sub{color:var(--muted);margin:20px 0 30px;max-width:48ch}
 .mail-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px}
-.mail{font-size:var(--t-l);letter-spacing:-.02em;user-select:all;word-break:break-all;font-weight:500;margin-right:6px}
+.mail{font-size:var(--t-l);letter-spacing:-.02em;user-select:all;overflow-wrap:anywhere;font-weight:500;margin-right:6px}
 .copy-note{font-size:var(--t-xs);color:var(--muted);min-height:1em}
 
 /* Case page */
@@ -395,7 +397,7 @@ footer{overflow:hidden;margin-top:clamp(56px,8vw,110px)}
       <p class="label" data-i="talk">Got a project?</p>
       <div class="push">
         <h3 data-i="talk_h">Let’s talk</h3>
-        <span class="mail">kateryna.katarovska@gmail.com</span>
+        <span class="mail">kateryna.katarovska<wbr>@gmail.com</span>
       </div>
     </a>
   </div>
@@ -454,7 +456,7 @@ footer{overflow:hidden;margin-top:clamp(56px,8vw,110px)}
     <h2 data-i="c_h">Let’s make it clear.</h2>
     <p class="sub" data-i="c_sub">Tell me about your product, deck or campaign.</p>
     <div class="mail-row">
-      <span class="mail" id="mail">kateryna.katarovska@gmail.com</span>
+      <span class="mail" id="mail">kateryna.katarovska<wbr>@gmail.com</span>
       <button class="btn accent" type="button" id="copy-btn" data-i="copy">Copy email</button>
       <a class="btn ghost" href="https://www.linkedin.com/in/kateryna-katarovska-999645174/" target="_blank" rel="noopener">LinkedIn <span class="ar" aria-hidden="true">↗</span></a>
       <span class="copy-note" id="copy-note" aria-live="polite"></span>
@@ -513,7 +515,7 @@ footer{overflow:hidden;margin-top:clamp(56px,8vw,110px)}
       tools:"Tools",ai:"AI tools",
       bq:"She doesn’t just make things look good, she makes them work.",bq_by:"Iryna P., colleague at Onix-Systems",
       industries:"Industries",elsewhere:"Elsewhere",bh_stats:"6.8K views",
-      talk:"Got a project?",talk_h:"Start a project →",
+      talk:"Got a project?",talk_h:"Start a project\u00a0→",
       sel_work:"Selected work",count:"9 projects · Behance",view:"View",
       rev_h:"Kind words",rev_note:"3 recommendations",
       q1_pull:"A secret weapon I call when I want an outside of the box thinker who can execute on elegant design.",
@@ -547,7 +549,7 @@ footer{overflow:hidden;margin-top:clamp(56px,8vw,110px)}
       tools:"Інструменти",ai:"AI-інструменти",
       bq:"Вона не просто робить гарно, вона робить так, щоб це працювало.",bq_by:"Ірина П., колега в Onix-Systems",
       industries:"Індустрії",elsewhere:"Де ще",bh_stats:"6.8K переглядів",
-      talk:"Є проєкт?",talk_h:"Обговорити проєкт →",
+      talk:"Є проєкт?",talk_h:"Обговорити проєкт\u00a0→",
       sel_work:"Вибрані роботи",count:"9 проєктів · Behance",view:"Дивитись",
       rev_h:"Відгуки",rev_note:"Переклад з англійської",
       q1_pull:"Таємна зброя, яку я кличу, коли потрібна людина з нестандартним мисленням, що вміє втілити елегантний дизайн.",
@@ -749,7 +751,7 @@ footer{overflow:hidden;margin-top:clamp(56px,8vw,110px)}
         '<div class="case-cta">'+
           '<a class="tile t-bh on-dark" href="https://www.behance.net/gallery/'+p.id+'" target="_blank" rel="noopener"><p class="label">Behance</p><div class="push"><h3>'+L.full+'</h3><p class="p">'+L.imgs(c.imgs)+'</p></div><span class="roundbtn" aria-hidden="true">↗</span></a>'+
           '<a class="tile t-next on-dark" href="#'+nx.slug+'" style="background-image:url(\''+nx.img+'\')"><p class="label">'+L.next+'</p><div class="push"><h3>'+esc(nx.name)+' →</h3></div></a>'+
-          '<a class="tile t-talk" href="#contact"><p class="label">'+L.cta_h+'</p><div class="push"><h3>'+T[lang].talk_h+'</h3><span class="mail">kateryna.katarovska@gmail.com</span></div></a>'+
+          '<a class="tile t-talk" href="#contact"><p class="label">'+L.cta_h+'</p><div class="push"><h3>'+T[lang].talk_h+'</h3><span class="mail">kateryna.katarovska<wbr>@gmail.com</span></div></a>'+
         '</div>'+
       '</article>';
   }

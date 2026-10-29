@@ -251,6 +251,7 @@ h2{font-size:var(--t-xl);font-weight:500;letter-spacing:-.045em;line-height:1.02
 .case-cta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap);margin-top:clamp(48px,7vw,96px)}
 .case-cta .tile{min-height:300px;transition:transform 160ms var(--ease-out)}
 .case-cta .t-talk{grid-area:auto}
+.case-cta.two{grid-template-columns:repeat(2,minmax(0,1fr))}
 .case-cta .tile:active{transform:scale(.985)}
 .t-bh{background:var(--inky)}
 .t-bh h3{font-size:var(--t-l);max-width:12ch}
@@ -259,7 +260,7 @@ h2{font-size:var(--t-xl);font-weight:500;letter-spacing:-.045em;line-height:1.02
 .t-next>*{position:relative}
 .t-next h3{font-size:var(--t-xl)}
 @media (hover:hover) and (pointer:fine){.back:hover{color:var(--fg)}.t-bh:hover .roundbtn{transform:rotate(45deg)}}
-@media (max-width:980px){.case-grid{grid-template-columns:1fr}.case-side{grid-template-columns:1fr 1fr;grid-template-rows:none}.case-cta{grid-template-columns:1fr 1fr}.case-cta .t-talk{grid-column:1/-1}}
+@media (max-width:980px){.case-grid{grid-template-columns:1fr}.case-side{grid-template-columns:1fr 1fr;grid-template-rows:none}.case-cta{grid-template-columns:1fr 1fr}.case-cta .t-talk{grid-column:1/-1}.case-cta.two .t-talk{grid-column:auto}}
 @media (max-width:640px){.case-side,.case-cta{grid-template-columns:1fr}.case-row{grid-template-columns:1fr;gap:10px}.case-cta .tile{min-height:220px}}
 .settled .bento>.tile,.settled .t-photo img,.settled .pill{animation:none}
 
@@ -410,7 +411,7 @@ footer{overflow:hidden;margin-top:clamp(56px,8vw,110px)}
   <section class="block" id="work">
     <div class="sec-head">
       <h2 data-i="sel_work">Selected work</h2>
-      <span class="label" data-i="count">9 projects · Behance</span>
+      <span class="label" data-i="count">10 projects</span>
     </div>
     <div class="work" id="work-grid"></div>
   </section>
@@ -488,6 +489,8 @@ footer{overflow:hidden;margin-top:clamp(56px,8vw,110px)}
 (function(){
   // Projects: set img to a file path to replace the colour block with the cover.
   var P = [
+    {id:"indexdev/Fintech-landing-page", name:"Index.dev Fintech", c:"--inky", dark:true, bh:false,
+      en:["Web design","Fintech landing page for an engineering partner"], ua:["Веб-дизайн","Фінтех-лендинг для інженерної компанії"], img:"img/indexdev.jpg"},
     {id:"143151485/Honna-London-e-commerce-website-redesign", name:"Honna London", c:"--blue-smoke", dark:false,
       en:["Web design","E-commerce website redesign"], ua:["Веб-дизайн","Редизайн e-commerce сайту"], img:"img/honna.jpg"},
     {id:"182465797/Decisive-Corporate-website-redesign", name:"Decisive", c:"--inky", dark:true,
@@ -521,7 +524,7 @@ footer{overflow:hidden;margin-top:clamp(56px,8vw,110px)}
       bq:"She doesn’t just make things look good, she makes them work.",bq_by:"Iryna P., colleague at Onix-Systems",
       industries:"Industries",elsewhere:"Elsewhere",bh_stats:"6.8K views",
       talk:"Got a project?",talk_h:"Start a project\u00a0→",
-      sel_work:"Selected work",count:"9 projects · Behance",view:"View",
+      sel_work:"Selected work",count:"10 projects",view:"View",
       rev_h:"Kind words",rev_note:"3 recommendations",
       q1_pull:"A secret weapon I call when I want an outside of the box thinker who can execute on elegant design.",
       q1_a:"Kateryna has been a freelance connection for me on a project basis over the past 10 years. She is an absolute delight to work with – talented, versatile, attention to detail, and follow through. She is able to seamlessly navigate work on multiple mediums. Software UX, agency design, digital art, and physical art.",
@@ -555,7 +558,7 @@ footer{overflow:hidden;margin-top:clamp(56px,8vw,110px)}
       bq:"Вона не просто робить гарно, вона робить так, щоб це працювало.",bq_by:"Ірина П., колега в Onix-Systems",
       industries:"Індустрії",elsewhere:"Де ще",bh_stats:"6.8K переглядів",
       talk:"Є проєкт?",talk_h:"Обговорити проєкт\u00a0→",
-      sel_work:"Вибрані роботи",count:"9 проєктів · Behance",view:"Дивитись",
+      sel_work:"Вибрані роботи",count:"10 проєктів",view:"Дивитись",
       rev_h:"Відгуки",rev_note:"Переклад з англійської",
       q1_pull:"Таємна зброя, яку я кличу, коли потрібна людина з нестандартним мисленням, що вміє втілити елегантний дизайн.",
       q1_a:"Катерина вже 10 років працює зі мною як фрилансерка на проєктній основі. Співпрацювати з нею — суцільне задоволення: талановита, різнобічна, уважна до деталей і завжди доводить справу до кінця. Вона легко переходить між різними медіа: UX для софту, агентський дизайн, діджитал-арт і фізичне мистецтво.",
@@ -598,7 +601,7 @@ footer{overflow:hidden;margin-top:clamp(56px,8vw,110px)}
     }).join("");
   }
 
-  var SLUG = {"143151485":"honna","182465797":"decisive","253892191":"marketing","257344473":"corevia","257264781":"chicken-road","254929851":"nibble","257238381":"igaming-banners","195329409":"korn","249357795":"transfernow"};
+  var SLUG = {"indexdev":"index-fintech","143151485":"honna","182465797":"decisive","253892191":"marketing","257344473":"corevia","257264781":"chicken-road","254929851":"nibble","257238381":"igaming-banners","195329409":"korn","249357795":"transfernow"};
   P.forEach(function(p){ p.slug = SLUG[p.id.split("/")[0]]; });
 
   var CT = {
@@ -609,6 +612,20 @@ footer{overflow:hidden;margin-top:clamp(56px,8vw,110px)}
   };
 
   var CASES = {
+    "index-fintech":{year:"2026",hero:"img/indexdev/hero.jpg",
+      gallery:["img/indexdev/01.jpg",{row:[{i:"img/indexdev/02.jpg"},{i:"img/indexdev/03.jpg"}]},"img/indexdev/04.jpg","img/indexdev/05.jpg",{row:[{i:"img/indexdev/m1.jpg"},{i:"img/indexdev/m2.jpg"},{i:"img/indexdev/m3.jpg"}]},"img/indexdev/06.jpg"],
+      en:{sub:"A fintech landing page for Index.dev’s product delivery team: senior engineers who build digital banks, payment gateways and DeFi from specification to production.",meta:[["client","Index.dev"],["role","Web designer"],["year","2026"]],stat:["7","shipped products shown as working interfaces"],
+        body:[["challenge","Turn a text-heavy draft into an enterprise page that proves fintech expertise to CTOs and heads of product. Seven case studies, compliance, the delivery model and two different offers, delivering the product or hiring engineers, all had to fit without turning into a wall of cards."],
+              ["approach","The page is built as an argument. A sticky index of four claims (compliance, numbers that reconcile, integrations, visible delivery) is proven one by one with real interface fragments from shipped products instead of icons. A live settlement calculator shows six transfers netting down to three. Tabs group what the team builds by area of finance, and a carousel walks through the seven cases."],
+              ["visual","A light hero with a glass sphere, then light sheets with rounded corners alternating with dark navy sections. Index.dev’s navy and orange carry the brand. Space Grotesk Light sets large display type, Inter the body copy and Geist Mono the small labels and pill buttons."],
+              ["outcome","A responsive page for desktop, tablet and mobile, delivered as working HTML with sources. Motion is kept purposeful: a masked headline, a slowly turning sphere, a navigation bar that detaches and floats on scroll, and a live transaction that arrives in the payment gateway table."]],
+        note:"Design proposal approved for showing by the client. Figures inside the product interfaces are sample data."},
+      ua:{sub:"Фінтех-лендинг для команди продуктової розробки Index.dev: сеньйорні інженери, які будують цифрові банки, платіжні шлюзи й DeFi від специфікації до продакшну.",meta:[["client","Index.dev"],["role","Веб-дизайнерка"],["year","2026"]],stat:["7","запущених продуктів, показаних живими інтерфейсами"],
+        body:[["challenge","Перетворити перевантажену текстом чернетку на ентерпрайз-сторінку, яка доводить фінтех-експертизу CTO й керівникам продукту. Сім кейсів, комплаєнс, модель роботи й дві різні пропозиції, розробку продукту під ключ або найм інженерів, треба було вмістити так, щоб не вийшла стіна карток."],
+              ["approach","Сторінка побудована як аргумент. Закріплений індекс із чотирьох тез (комплаєнс, цифри, що сходяться, надійні інтеграції, прозорий процес) доводиться по черзі справжніми фрагментами інтерфейсів запущених продуктів замість іконок. Живий калькулятор неттингу показує, як шість переказів стискаються до трьох. Таби групують напрями фінансів, а карусель проводить через сім кейсів."],
+              ["visual","Світлий hero зі скляною сферою, далі світлі аркуші із заокругленими кутами чергуються з темними navy-секціями. Бренд тримають navy й помаранчевий Index.dev. Space Grotesk Light для великих заголовків, Inter для тексту й Geist Mono для дрібних лейблів і кнопок-пігулок."],
+              ["outcome","Адаптивна сторінка для десктопа, планшета й мобайлу, передана робочим HTML із сорсами. Анімація лише там, де має сенс: заголовок виїжджає з-під маски, сфера повільно обертається, навігація відривається й плаває при скролі, а в таблиці платіжного шлюзу з'являється нова транзакція."]],
+        note:"Дизайн-пропозиція, показ погоджено із замовником. Цифри всередині інтерфейсів — демонстраційні дані."}},
     "honna":{year:"2022",imgs:7,
       gallery:["img/honna/01.jpg",{row:[{i:"img/honna/02.jpg"},{i:"img/honna/06.jpg"}]},{row:[{i:"img/honna/03.jpg"},{i:"img/honna/04.jpg"}]},"img/honna/05.jpg",{mid:"img/honna/07.jpg"}],
       en:{sub:"UX/UI case study for a London sustainable sleepwear brand: faster product discovery and a store that feels as considered as the product.",meta:[["type","Self-directed UX/UI case study"],["role","UX/UI designer"],["year","2022"]],stat:["3","goals behind the redesign"],
@@ -753,8 +770,8 @@ footer{overflow:hidden;margin-top:clamp(56px,8vw,110px)}
             return '<figure class="g-vid"><video src="'+v.v+'" poster="'+v.poster+'" muted loop playsinline preload="metadata"'+(still?' controls':' autoplay')+' aria-label="'+esc(p.name)+' animated creative"></video></figure>'; }).join('')+'</div>';
         }).join('')+'</div>' : '')+
         (t.note ? '<p class="case-note label">'+esc(t.note)+'</p>' : '')+
-        '<div class="case-cta">'+
-          '<a class="tile t-bh on-dark" href="https://www.behance.net/gallery/'+p.id+'" target="_blank" rel="noopener"><p class="label">Behance</p><div class="push"><h3>'+L.full+'</h3><p class="p">'+L.imgs(c.imgs)+'</p></div><span class="roundbtn" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>'+
+        '<div class="case-cta'+(p.bh===false?' two':'')+'">'+
+          (p.bh===false ? '' : '<a class="tile t-bh on-dark" href="https://www.behance.net/gallery/'+p.id+'" target="_blank" rel="noopener"><p class="label">Behance</p><div class="push"><h3>'+L.full+'</h3><p class="p">'+L.imgs(c.imgs)+'</p></div><span class="roundbtn" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>')+
           '<a class="tile t-next on-dark" href="#'+nx.slug+'" style="background-image:url(\''+nx.img+'\')"><p class="label">'+L.next+'</p><div class="push"><h3>'+esc(nx.name)+' →</h3></div></a>'+
           '<a class="tile t-talk" href="#contact"><p class="label">'+L.cta_h+'</p><div class="push"><h3>'+T[lang].talk_h+'</h3><span class="mail">kateryna.katarovska<wbr>@gmail.com</span></div></a>'+
         '</div>'+

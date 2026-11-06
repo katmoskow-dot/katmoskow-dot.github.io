@@ -388,7 +388,7 @@ footer{overflow:hidden;margin-top:clamp(56px,8vw,110px)}
 
     <div class="tile t-clients">
       <p class="label" data-i="industries">Industries</p>
-      <ul class="chips inds push"><li>IT outsourcing</li><li>SaaS</li><li>Fintech</li><li>EdTech</li><li>iGaming</li><li>E-commerce</li></ul>
+      <ul class="chips inds push"><li>IT outsourcing</li><li>SaaS</li><li>Fintech</li><li>EdTech</li><li>E-commerce</li></ul>
     </div>
 
     <div class="tile t-else">
@@ -411,7 +411,7 @@ footer{overflow:hidden;margin-top:clamp(56px,8vw,110px)}
   <section class="block" id="work">
     <div class="sec-head">
       <h2 data-i="sel_work">Selected work</h2>
-      <span class="label" data-i="count">10 projects</span>
+      <span class="label" data-i="count">8 projects</span>
     </div>
     <div class="work" id="work-grid"></div>
   </section>
@@ -499,12 +499,8 @@ footer{overflow:hidden;margin-top:clamp(56px,8vw,110px)}
       en:["Marketing design","Editorial, decks, lead magnets, brand collateral"], ua:["Маркетинговий дизайн","Редакційний дизайн, презентації, лід-магніти"], img:"img/marketing/01.jpg"},
     {id:"257344473/Pitch-deck-presentation", name:"Corevia Pitch Deck", c:"--blue-smoke", dark:false,
       en:["Presentations","Pitch deck for an AI services company"], ua:["Презентації","Пітч-дек для AI-компанії"], img:"img/pitch.jpg"},
-    {id:"257264781/Make-Your-Next-Move-Game-Ad-Creatives", name:"Chicken Road", c:"--inky", dark:true,
-      en:["iGaming","Ad creative campaign: 5 creatives, key visual"], ua:["iGaming","Рекламна кампанія: 5 креативів, key visual"], img:"img/chicken/01.jpg"},
     {id:"254929851/Nibble-Creative-Ad-Campaign-for-Microlearning", name:"Nibble", c:"--shepherd", dark:false,
       en:["Ad creatives","Ad campaign for a bite-sized learning app"], ua:["Рекламні креативи","Кампанія для застосунку мікронавчання"], img:"img/nibble.jpg"},
-    {id:"257238381/Creative-banners-promo", name:"iGaming Promo Banners", c:"--rescue", dark:true,
-      en:["iGaming","Promo banner set"], ua:["iGaming","Набір промо-банерів"], img:"img/banners.jpg"},
     {id:"195329409/Korn-Longread-Webdesign-Project", name:"Korn", c:"--mr-robin", dark:false,
       en:["Web design","Wasteland Voice, a longread about the band"], ua:["Веб-дизайн","Wasteland Voice, лонгрід про гурт"], img:"img/korn-2.jpg"},
     {id:"249357795/TransferNow-Airport-Transfer-Planning-App", name:"TransferNow", c:"--seaweed", dark:true,
@@ -524,7 +520,7 @@ footer{overflow:hidden;margin-top:clamp(56px,8vw,110px)}
       bq:"She doesn’t just make things look good, she makes them work.",bq_by:"Iryna P., colleague at Onix-Systems",
       industries:"Industries",elsewhere:"Elsewhere",bh_stats:"6.8K views",
       talk:"Got a project?",talk_h:"Start a project\u00a0→",
-      sel_work:"Selected work",count:"10 projects",view:"View",
+      sel_work:"Selected work",count:"8 projects",view:"View",
       rev_h:"Kind words",rev_note:"3 recommendations",
       q1_pull:"A secret weapon I call when I want an outside of the box thinker who can execute on elegant design.",
       q1_a:"Kateryna has been a freelance connection for me on a project basis over the past 10 years. She is an absolute delight to work with – talented, versatile, attention to detail, and follow through. She is able to seamlessly navigate work on multiple mediums. Software UX, agency design, digital art, and physical art.",
@@ -558,7 +554,7 @@ footer{overflow:hidden;margin-top:clamp(56px,8vw,110px)}
       bq:"Вона не просто робить гарно, вона робить так, щоб це працювало.",bq_by:"Ірина П., колега в Onix-Systems",
       industries:"Індустрії",elsewhere:"Де ще",bh_stats:"6.8K переглядів",
       talk:"Є проєкт?",talk_h:"Обговорити проєкт\u00a0→",
-      sel_work:"Вибрані роботи",count:"10 проєктів",view:"Дивитись",
+      sel_work:"Вибрані роботи",count:"8 проєктів",view:"Дивитись",
       rev_h:"Відгуки",rev_note:"Переклад з англійської",
       q1_pull:"Таємна зброя, яку я кличу, коли потрібна людина з нестандартним мисленням, що вміє втілити елегантний дизайн.",
       q1_a:"Катерина вже 10 років працює зі мною як фрилансерка на проєктній основі. Співпрацювати з нею — суцільне задоволення: талановита, різнобічна, уважна до деталей і завжди доводить справу до кінця. Вона легко переходить між різними медіа: UX для софту, агентський дизайн, діджитал-арт і фізичне мистецтво.",
@@ -601,7 +597,7 @@ footer{overflow:hidden;margin-top:clamp(56px,8vw,110px)}
     }).join("");
   }
 
-  var SLUG = {"indexdev":"index-fintech","143151485":"honna","182465797":"decisive","253892191":"marketing","257344473":"corevia","257264781":"chicken-road","254929851":"nibble","257238381":"igaming-banners","195329409":"korn","249357795":"transfernow"};
+  var SLUG = {"indexdev":"index-fintech","143151485":"honna","182465797":"decisive","253892191":"marketing","257344473":"corevia","254929851":"nibble","195329409":"korn","249357795":"transfernow"};
   P.forEach(function(p){ p.slug = SLUG[p.id.split("/")[0]]; });
 
   var CT = {
@@ -670,20 +666,6 @@ footer{overflow:hidden;margin-top:clamp(56px,8vw,110px)}
               ["approach","Дек побудований як пітч: проблема, рішення, докази, наступний крок. Кожен розділ відповідає на одне питання, яке CIO ставить перед підписанням, а навігаційні таби на кожному слайді показують, де аудиторія в історії. Розміри ринку, метрики кейсів і графіки зібрані в модульні картки, по одному твердженню на картку."],
               ["visual","Спокійна ентерпрайз-база з чорнильного й світлого полотна з одним упевненим лаймовим акцентом. Poppins Medium для заголовків і цифр, Inter для тексту й даних, а лавандове виділення підсвічує ключову фразу в кожному заголовку. Світлі й темні слайди чергуються й тримають ритм."],
               ["outcome","Дек закінчується рішенням, а не «дякую»: заперечення закриті до фінального слайда, а він веде до конкретного кроку, двотижневого scoping-спринту з прямими контактами."]]}},
-    "chicken-road":{year:"2026",imgs:7,hero:"img/chicken/01.jpg",
-      gallery:["img/chicken/02.jpg","img/chicken/03.jpg",{row:[1,2,3].map(function(n){return {v:"img/chicken/loop"+n+".mp4",poster:"img/chicken/poster"+n+".jpg"}})},"img/chicken/05.jpg"],
-      en:{sub:"Concept ad campaign for an arcade-style mobile game, built for the US market.",meta:[["client","Concept project"],["role","Visual designer"],["year","2026"]],stat:["5 + 1","feed creatives and a key visual"],
-        body:[["challenge","Build a whole set around one message, “Make your next move”, for Chicken Road, a fast arcade game where a brave chicken crosses a road of glowing multipliers. Every creative had to stop the scroll and drive an instant click."],
-              ["approach","I explored five visual angles with a shared toolkit: a neon night city, golden multiplier tiles and a bold green call to action. Characters and scenes were generated with AI, then refined into a consistent visual system in Figma."],
-              ["visual","Midnight navy, neon green, gold and pure white. A condensed sans and a gold italic serif carry the message, and every creative keeps the same headline, button and tile language."],
-              ["outcome","A 16:9 key visual and five 1:1 feed creatives (Coin Rush, Golden Leap, Neon Diner, Golden Path and Night Run), with animated versions for social."]],
-        note:"Concept project for my portfolio. Not affiliated with or endorsed by the game’s developer."},
-      ua:{sub:"Концептуальна рекламна кампанія для мобільної аркадної гри, для ринку США.",meta:[["client","Концепт-проєкт"],["role","Візуальна дизайнерка"],["year","2026"]],stat:["5 + 1","креативів для стрічки й key visual"],
-        body:[["challenge","Зібрати цілий набір навколо одного меседжу «Make your next move» для Chicken Road, швидкої аркадної гри про хоробру курку, що переходить дорогу з сяйливих множників. Кожен креатив мав зупинити скрол і викликати миттєвий клік."],
-              ["approach","Я дослідила п’ять візуальних підходів на спільних елементах: неонове нічне місто, золоті плитки-множники й яскрава зелена кнопка. Персонажів і сцени згенерувала з AI, а потім довела до цілісної візуальної системи у Figma."],
-              ["visual","Опівнічний синій, неоновий зелений, золото й чисто білий. Вузький гротеск і золотий курсивний антиква несуть меседж, а всі креативи тримають однаковий заголовок, кнопку й мову плиток."],
-              ["outcome","Key visual 16:9 і п’ять креативів 1:1 для стрічки (Coin Rush, Golden Leap, Neon Diner, Golden Path і Night Run), плюс анімовані версії для соцмереж."]],
-        note:"Концепт-проєкт для портфоліо. Не пов’язаний з розробником гри й не схвалений ним."}},
     "nibble":{year:"2026",imgs:6,
       gallery:["img/nibble/02.jpg","img/nibble/03.jpg",{mid:"img/nibble/04.jpg"},"img/nibble/05.jpg","img/nibble/06.jpg"],
       en:{sub:"Paid social campaign for a bite-sized learning app: four creative hypotheses and a connected three-step funnel.",meta:[["client","Nibble"],["role","Creative strategy, art direction"],["year","2026"]],stat:["4","creative angles across a 3-step funnel"],
@@ -698,20 +680,6 @@ footer{overflow:hidden;margin-top:clamp(56px,8vw,110px)}
               ["approach","Людям не обов’язково потрібно більше освіти. Їм потрібне те, що дають знання. Замість одного загального меседжу я дослідила чотири мотивації, кожна зі своєю концепцією: лайфстайл (Matcha), соціальна вигода (Restaurant), час (Subway) і цікавість (Van Gogh)."],
               ["visual","Кожну концепцію адаптувала під формати Instagram Story й Facebook Ad, зберігаючи ієрархію, фокус і читабельність у різних пропорціях: у Matcha героєм лишається напій, у Restaurant — реакція персонажа, у Subway — меседж про час, у Van Gogh — картина."],
               ["outcome","Напрям Social Payoff я розвинула в трикрокову послідовність від бажання до розуміння й дії: TOFU створює прагнення, MOFU пояснює продукт, BOFU веде до першого уроку. Один продукт, різні мотивації, зв’язані меседжі."]]}},
-    "igaming-banners":{year:"2026",imgs:4,
-      gallery:[{vid:"img/banners/loop.mp4",poster:"img/banners/poster.jpg"},"img/banners/01.jpg","img/banners/02.jpg","img/banners/03.jpg"],
-      en:{sub:"Banner system for a fictional iGaming brand: three campaigns, three mascots, seven placements each.",meta:[["client","Concept project"],["role","Visual designer"],["year","2026"]],stat:["21","banners across 3 campaigns"],
-        body:[["challenge","Build a banner system that keeps one recognisable look across very different placements, from a 1920×600 desktop hero to a 320×100 mobile banner, while giving each promo its own character."],
-              ["approach","Three AI-generated mascots anchor three campaigns: a cowboy with a golden reel machine for the Welcome Bonus, a wizard for the seasonal Spin & Win thunder event, and a gentleman with a treasure chest for the weekly Card Nights tournament."],
-              ["visual","A deep purple base with radiating light, gold coins and a chunky gold headline, a pill for the secondary offer and a gold CTA button. The same layout logic is rebuilt for each size, so the offer, character and button stay readable in every crop."],
-              ["outcome","Seven placements per campaign: desktop hero slider 1920×600, social square 1080×1080, half page 300×600, billboard 970×250, medium rectangle 300×250, leaderboard 728×90 and mobile banner 320×100, plus an animated hero."]],
-        note:"Concept project for a fictional brand, created for my portfolio."},
-      ua:{sub:"Система банерів для вигаданого iGaming-бренду: три кампанії, три маскоти, сім розмірів у кожній.",meta:[["client","Концепт-проєкт"],["role","Візуальна дизайнерка"],["year","2026"]],stat:["21","банер у 3 кампаніях"],
-        body:[["challenge","Побудувати систему банерів, яка тримає один упізнаваний стиль у дуже різних розмірах, від десктопного hero 1920×600 до мобільного 320×100, і водночас дає кожній акції свій характер."],
-              ["approach","Три маскоти, згенеровані з AI, тримають три кампанії: ковбой із золотим слот-автоматом для Welcome Bonus, чарівник для сезонної події Spin & Win і джентльмен зі скринею скарбів для щотижневого турніру Card Nights."],
-              ["visual","Глибока фіолетова база з променями світла, золоті монети й масивний золотий заголовок, плашка для додаткової пропозиції та золота кнопка. Ту саму логіку макета я перебудовувала під кожен розмір, тож пропозиція, персонаж і кнопка читаються в будь-якому кропі."],
-              ["outcome","Сім розмірів у кожній кампанії: десктопний слайдер 1920×600, соцмережі 1080×1080, half page 300×600, billboard 970×250, medium rectangle 300×250, leaderboard 728×90 і мобільний банер 320×100, плюс анімований hero."]],
-        note:"Концепт-проєкт для вигаданого бренду, створений для портфоліо."}},
     "korn":{year:"2024",imgs:7,
       gallery:[{row:[{i:"img/korn/01.jpg"},{i:"img/korn/02.jpg"}]},{row:[{i:"img/korn/03.jpg"},{i:"img/korn/04.jpg"}]},{row:[{i:"img/korn/05.jpg"},{i:"img/korn/06.jpg"}]},"img/korn/07.jpg"],
       en:{sub:"Wasteland Voice: a longread web page about the band’s sound, story and legacy.",meta:[["type","Longread web page"],["role","Web designer"],["year","2024"]],stat:["5","chapters from genesis to legacy"],
